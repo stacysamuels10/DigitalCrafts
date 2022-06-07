@@ -1,0 +1,7 @@
+in the command line "git status" 
+    "git" is the command and "status" is the argument
+in the command line "rm -rf ./Sample"
+    "rm" is the command, "-rf" is the option and "./Sample" is the argument
+in the command line "/usr/bin/ruby -e..."
+    "/usr/bin/ruby" is the command and "-e" is the option and "$(cur...all)"
+    is the command
