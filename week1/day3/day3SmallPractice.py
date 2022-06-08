@@ -66,3 +66,4 @@ print(newList6)
 
 word = "Stacy" [::-1]
 print(word)
+
