@@ -1,5 +1,5 @@
 SIZE = 3
-empty = " |"
+empty = "|_|"
 board = []
 
 for y in range(SIZE):
@@ -9,6 +9,6 @@ for y in range(SIZE):
 
 for row in board:
     for column in row:
-        print("%s_" % column, end=" ")
+        print("%s" % column, end=" ")
     print("\n")
 
