@@ -13,10 +13,10 @@ sideOfCoin = random.randint(0,2) #making a random choice
 def flipACoin (): #creating a function
     if sideOfCoin < 1:
         print('You flipped a coin!')
-        print('It is heads!')
+        print('\nIt is heads!')
     if sideOfCoin > 1:
         print('You flipped a coin!')
-        print('It is tails')
+        print('\nIt is tails!')
 
 flipACoin() #calling the function
 
@@ -32,15 +32,15 @@ num = int(input('Enter your favorite number: '))
 
 def evenOrOdd (num) :
     if (num % 2) == 0:
-        print("It's Even!")
+        print("\nIt's Even!")
     else:
-        print("It's Odd!")
+        print("\nIt's Odd!")
 
 evenOrOdd(num)
 
 print("\n")
 sleep(1)
-print("Last one!")
+print("Last one!\n")
 sleep(1)
 
 # dice roller
@@ -57,7 +57,7 @@ pickADice = int(input('How many sides should it have? (2-20): '))
 diceSides = random.randint(2,pickADice)
 
 def rollTheDice (diceSides):
-    print("It's rolling...")
+    print("It's rolling...\n")
     sleep(2)
     print("You rolled " + str(diceSides) + "!")
 
