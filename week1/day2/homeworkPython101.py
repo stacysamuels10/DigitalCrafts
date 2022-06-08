@@ -1,7 +1,7 @@
 # Coin Flip
 # Write a function that will flip a coin and print result
 # should be a 50/50 chance of heads or tails
-
+print ("\n")
 import random
 sideOfCoin = random.randint(0,2) #making a random choice
 def flipACoin (): #creating a function
@@ -12,7 +12,9 @@ def flipACoin (): #creating a function
         print('You flipped a coin!')
         print('It is tails')
 
-# flipACoin() #calling the function
+flipACoin() #calling the function
+
+print("\n")
 
 
 #Even Odd
@@ -26,7 +28,9 @@ def evenOrOdd (num) :
     else:
         print("It's Odd!")
 
-# evenOrOdd(num)
+evenOrOdd(num)
+
+print("\n")
 
 # dice roller
 # write a function that take two numbers as arguments #int(input())
@@ -48,3 +52,4 @@ def rollTheDice (diceSides):
     print("You rolled " + str(diceSides) + "!")
 
 rollTheDice(diceSides)
+print("\n")
