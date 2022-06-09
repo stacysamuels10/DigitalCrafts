@@ -11,6 +11,4 @@ def twoSum (nums):
             if i + j == target:
                 return [nums.index(i), nums.index(j)]
 
-newNumber = twoSum(nums)
-
-print(newNumber)
+print(twoSum(nums))
