@@ -14,6 +14,8 @@ sizeOfCup = 0
 strengthOfCoffee = 0
 orders = []
 
+
+
 def numberOfOrder (howManyOrders, sizeOfCup, strengthOfCoffee, orders):
     howManyOrders = howManyOrders + int(input("How many cups would you like? ")) #how many cups
     for number in range(howManyOrders): #asking what size for each one
@@ -30,22 +32,29 @@ def numberOfOrder (howManyOrders, sizeOfCup, strengthOfCoffee, orders):
         """
         print(choiceList)
         strengthOfCoffee = int(input("What strength would you like coffee number %d? \n 1 or 2? \n" % (number+1)))
-        orders.append([howManyOrders, sizeOfCup, strengthOfCoffee])
+        orders.append(howManyOrders)
+        orders.append(sizeOfCup)
+        orders.append(strengthOfCoffee)
     return orders
+    return howManyOrders
+    
+#[2, 1, 1, 2, 2, 2]
 
+#need to figure out how to access list object as an integer
 def coffeeCalculations (*orders):
-    for number in orders[0][0]:
-            if orders[number-1][1] == 1:
-                 print("small")
-            if orders[number-1][1] == 2:
-                 print("medium")
-            if orders[number-1][1] == 3:
-                print("large")
+    for number in howManyOrders:
+        print(*orders(number))
+            # if orders[((number+1)*2)] == 1:
+            #      print("small")
+            # if orders[((number+1)*2)] == 2:
+            #      print("medium")
+            # if orders[((number+1)*2)] == 3:
+            #     print("large")
 
-            if orders[number-1][2] == 1:
-                 print("normal")
-            if orders[number-1][2] == 2:
-                 print("strong")
+            # if orders[((number+1)*3)] == 1:
+            #      print("normal")
+            # if orders[((number+1)*3)] == 2:
+            #      print("strong")
 
 
 numberOfOrder(howManyOrders, sizeOfCup, strengthOfCoffee, orders)
