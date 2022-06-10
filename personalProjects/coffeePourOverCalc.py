@@ -9,53 +9,55 @@
 
 #separate lists, enumerate lists
 
-howManyOrders = 0
-sizeOfCup = 0
-strengthOfCoffee = 0
-orders = []
+listOfOrders = []
+moreCoffee = ""
+pourAmount = 0
 
 
+def prepCoffeeOrder ():
+    cupSize = input("What size coffee do you want? sm, med,lg\n")
+    strength = input("What kind of strength do you want? normal, strong\n")
+    order = {
+        "size": cupSize,
+        "caffiene": strength
+    }
+    listOfOrders.append(order)
+def calcCoffeeGrind(listOfOrders):
+    grindAmount = 0
+    pourAmount = 0
+    for order in listOfOrders:
+        if order["size"] == 'sm':
+            if order["caffiene"] == 'normal':
+                grindAmount = grindAmount + 21
+                pourAmount = pourAmount + 345
+            if order["caffiene"] == 'strong':
+                grindAmount = grindAmount + 23
+                pourAmount = pourAmount + 345
+        if order["size"] == 'med':
+            if order["caffiene"] == 'normal':
+                grindAmount = grindAmount + 28
+                pourAmount = pourAmount + 450
+            if order["caffiene"] == 'strong':
+                grindAmount = grindAmount + 30
+                pourAmount = pourAmount + 450        
+        if order["size"] == 'lg':
+            if order["caffiene"] == 'normal':
+                grindAmount = grindAmount + 33
+                pourAmount = pourAmount + 525
+            if order["caffiene"] == 'strong':
+                grindAmount = grindAmount + 35
+                pourAmount = pourAmount + 525
+    print(f"""
+    You will need to grind {grindAmount} grams of coffee.
+    Your first bloom pour will be {(grindAmount*2)} grams of hot water.
+    Wait 45 - 60 seconds
+    Your next pour will be up to {(pourAmount/2)} grams of hot water.
+    Your final pour will be up to {pourAmount} grams of hot water.
+    Let the water turn to delicious bean water and enjoy!
+    """)
 
-def numberOfOrder (howManyOrders, sizeOfCup, strengthOfCoffee, orders):
-    howManyOrders = howManyOrders + int(input("How many cups would you like? ")) #how many cups
-    for number in range(howManyOrders): #asking what size for each one
-        choiceList = """
-1. Small
-2. Medium
-3. Large
-"""
-        print(choiceList)
-        sizeOfCup = int(input("For coffee number %d, what size coffee would you like?   \n 1, 2, or 3? \n" % (number+1)))
-        choiceList = """
-        1. Normal
-        2. Strong
-        """
-        print(choiceList)
-        strengthOfCoffee = int(input("What strength would you like coffee number %d? \n 1 or 2? \n" % (number+1)))
-        orders.append(howManyOrders)
-        orders.append(sizeOfCup)
-        orders.append(strengthOfCoffee)
-    return orders
-    return howManyOrders
-    
-#[2, 1, 1, 2, 2, 2]
+while moreCoffee.lower() != "n":
+    prepCoffeeOrder()
+    moreCoffee = input("Want more coffee? Y/N \n")
 
-#need to figure out how to access list object as an integer
-def coffeeCalculations (*orders):
-    for number in howManyOrders:
-        print(*orders(number))
-            # if orders[((number+1)*2)] == 1:
-            #      print("small")
-            # if orders[((number+1)*2)] == 2:
-            #      print("medium")
-            # if orders[((number+1)*2)] == 3:
-            #     print("large")
-
-            # if orders[((number+1)*3)] == 1:
-            #      print("normal")
-            # if orders[((number+1)*3)] == 2:
-            #      print("strong")
-
-
-numberOfOrder(howManyOrders, sizeOfCup, strengthOfCoffee, orders)
-coffeeCalculations (orders)
+calcCoffeeGrind(listOfOrders)
