@@ -48,9 +48,9 @@ def compareWords (userGuess):
     i = 0
     counter = 5
     print(wordleWord)
-        if userGuess.lower() == wordleWord:
-            print("You win!")
-            break
+    if userGuess.lower() == wordleWord:
+        print("You win!")
+        return
     while i < 5:
         if userGuess.lower() != wordleWord:
             a=0
