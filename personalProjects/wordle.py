@@ -53,24 +53,28 @@ def compareWords ():
         if userGuess.lower() == wordleWord:
             print("You win!")
             break
-        if userGuess.lower() != wordleWord:
+        while userGuess.lower() != wordleWord:
             a=0
             b = 0
+            c = 0
             x = 0
             letter = 0
             greenLetter = ''
             yellowLetter = ''
-            if userGuess[a] == wordleWord[a]:
-                greenLetter = greenLetter + userGuess[a]
-                a+=1
+            if userGuess[c] == wordleWord[c]:
+                greenLetter = greenLetter + userGuess[c]
+                c +=1
             for a in range(4):
                 for b in range(4):
                     if userGuess[a] == wordleWord[b]:
-                        yellowLetter = yellowLetter + userGuess[a] - greenLetter
+                        if a != b:
+                            yellowLetter = yellowLetter + userGuess[a]
+                            b += 1
+                            a += 1
             if greenLetter == '' and yellowLetter == '':
                 print('No letters are in the correct spot')
             elif greenLetter == '' and yellowLetter != '':
-                print(f'No letters are in the correct spot, but {yellowLetter} are in the word but in a different spot')
+                        print(f'No letters are in the correct spot, but {yellowLetter} are in the word but in a different spot')
             elif greenLetter != '' and yellowLetter != '':
                 print(f"{greenLetter} are in the correct spot and {yellowLetter} are in the word but in a different spot")
             print("Try Again\n")
