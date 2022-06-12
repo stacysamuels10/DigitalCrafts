@@ -47,30 +47,30 @@ wordleWord = random.choice(listOfWords)
 def compareWords ():
     i = 1
     counter = 5
-    userGuess = input("Choose a 5 letter word: \n")
     print(wordleWord)
+    firstGuess = input("Choose a 5 letter word: \n")
     while i < 6:
+        userGuess.lower() = firstGuess
         if userGuess.lower() == wordleWord:
             print("You win!")
             break
-        while userGuess.lower() != wordleWord:
+        if userGuess.lower() != wordleWord:
             a=0
             b = 0
             c = 0
-            x = 0
-            letter = 0
             greenLetter = ''
             yellowLetter = ''
-            if userGuess[c] == wordleWord[c]:
-                greenLetter = greenLetter + userGuess[c]
+            for c in range(4):
+                if userGuess[c] == wordleWord[c]:
+                    greenLetter = greenLetter + userGuess[c]
                 c +=1
             for a in range(4):
                 for b in range(4):
                     if userGuess[a] == wordleWord[b]:
                         if a != b:
                             yellowLetter = yellowLetter + userGuess[a]
-                            b += 1
-                            a += 1
+                    b += 1
+                a += 1
             if greenLetter == '' and yellowLetter == '':
                 print('No letters are in the correct spot')
             elif greenLetter == '' and yellowLetter != '':
