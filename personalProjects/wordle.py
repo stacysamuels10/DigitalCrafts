@@ -43,17 +43,15 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'woman', 'world', 'youth']
 
 wordleWord = random.choice(listOfWords)
-
-def compareWords ():
-    i = 1
+userGuess = input("Choose a 5 letter word: \n")
+def compareWords (userGuess):
+    i = 0
     counter = 5
     print(wordleWord)
-    firstGuess = input("Choose a 5 letter word: \n")
-    while i < 6:
-        userGuess.lower() = firstGuess
         if userGuess.lower() == wordleWord:
             print("You win!")
             break
+    while i < 5:
         if userGuess.lower() != wordleWord:
             a=0
             b = 0
@@ -82,4 +80,4 @@ def compareWords ():
         i += 1
         counter -= 1
 
-compareWords()
+compareWords(userGuess)
