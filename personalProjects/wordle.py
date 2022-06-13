@@ -9,7 +9,6 @@
 #if letter is in word but different index spot, half correct
 # if not there at all, incorrect
 import random
-userGuess = ''
 listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'award', 'basis', 'beach', 'birth', 'block', 'blood', 'board', \
 'brain', 'bread', 'break', 'brown', 'buyer', 'cause', 'chain', \
@@ -42,9 +41,10 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'voice', 'waste', 'watch', 'water', 'while', 'white', 'whole',\
 'woman', 'world', 'youth']
 
+wordleWord = random.choice(listOfWords)
+userGuess = ''
+
 def wordArray ():
-    userGuess = 'wangr'
-    wordleWord = 'range'
 #[0, 2, 2, 2, 1]
     a = 0
     b = 0
@@ -52,7 +52,7 @@ def wordArray ():
     for a in range(len(userGuess)):
         if userGuess[a] not in wordleWord:
            result.append('0')
-        for b in range(len(userGuess)):
+        for b in range(4):
             if userGuess[a] == wordleWord[b]:
                 if a != b:
                     result.append('1')
@@ -61,10 +61,12 @@ def wordArray ():
     print(result)
 
 def chooseCorrectWord ():
-    while userGuess != wordleWord:
-        wordArray()
     if userGuess == wordleWord:
         print('you win!')
+    else:
+        wordArray()
+
+#chooseCorrectWord()
 
 def numberOfGuesses ():
     i = 0
