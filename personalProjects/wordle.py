@@ -55,7 +55,7 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 #     print(result)
 #exactSpot()
 
-def yellowSpot ():
+def wordArray ():
     userGuess = 'wangr'
     wordleWord = 'range'
 #[0, 2, 2, 2, 1]
@@ -71,62 +71,6 @@ def yellowSpot ():
                     result.append('1')
                 if a == b:
                     result.append('2')
-
     print(result)
 
-def noSpot ():
-    userGuess = 'wangr'
-    wordleWord = 'range'
-#[0, 2, 2, 2, 1]
-    a = 0
-    b = 0
-    result = []
-    for a in range(len(userGuess)):
-            if userGuess[a] not in wordleWord:
-               result.append('0')
-    print(result)
-
-
-
-yellowSpot()
-#noSpot()
-
-#wordleWord = random.choice(listOfWords)
-#userGuess = input("Choose a 5 letter word: \n")
-# def compareWords (userGuess):
-#     i = 0
-#     counter = 5
-#     print(wordleWord)
-#     if userGuess.lower() == wordleWord:
-#         print("You win!")
-#         return
-#     while i < 5:
-#         if userGuess.lower() != wordleWord:
-#             a=0
-#             b = 0
-#             c = 0
-#             greenLetter = ''
-#             yellowLetter = ''
-#             for c in range(4):
-#                 if userGuess[c] == wordleWord[c]:
-#                     greenLetter = greenLetter + userGuess[c]
-#                 c +=1
-#             for a in range(4):
-#                 for b in range(4):
-#                     if userGuess[a] == wordleWord[b]:
-#                         if a != b:
-#                             yellowLetter = yellowLetter + userGuess[a]
-#                     b += 1
-#                 a += 1
-#             if greenLetter == '' and yellowLetter == '':
-#                 print('No letters are in the correct spot')
-#             elif greenLetter == '' and yellowLetter != '':
-#                         print(f'No letters are in the correct spot, but {yellowLetter} are in the word but in a different spot')
-#             elif greenLetter != '' and yellowLetter != '':
-#                 print(f"{greenLetter} are in the correct spot and {yellowLetter} are in the word but in a different spot")
-#             print("Try Again\n")
-#             userGuess = input(f"What is your next guess? You have {counter} chances left\n")
-#         i += 1
-#         counter -= 1
-
-# compareWords(userGuess)
+wordArray()
