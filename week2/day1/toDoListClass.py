@@ -6,31 +6,40 @@
 # while true, create class if q then false
 
 listOfTasks = []
+priorityOfTasks = []
 
 choice = ""
 
 def addItem():
     itemToAdd = input("What task would you like to add?\n")
+    prioToAdd = input("What is the task priority? High, Med, or Low\n")
     newTask = Item(itemToAdd)
+    newPrio = Item(prioToAdd)
     listOfTasks.append(newTask)
+    priorityOfTasks.append(prioToAdd)
     print("Your to dos:")
     for stuff in listOfTasks:
-        print(stuff.name)
+        for stuff in priorityOfTasks:
+            print(f"{stuff.name} - {stuff.priority}")
 
 def removeItem():
     for stuff in listOfTasks:
-        index = listOfTasks.index(stuff)
-        print((index+1), stuff.name)
+        index = listOfTasks.index(stuff, priority)
+        print((index+1), stuff.name, priority)
     itemToRemove = int(input("Please type the number of the task you would like to remove\n"))
     del listOfTasks[itemToRemove-1]
+    del priorityOfTasks[itemToRemove-1]
     print("Your to dos:")
     for stuff in listOfTasks:
-        print(stuff.name)
+        for stuff in priorityOfTasks:
+            print(f"{stuff.name} - {stuff.priority}")
+
 
 
 class Item:
-    def __init__(self, name):
+    def __init__(self, name, priority):
         self.name = name
+        self.priority = priority
 
 
 while choice != "q":
@@ -47,4 +56,5 @@ while choice != "q":
     if choice == "3":
         print("Your to dos: \n")
         for stuff in listOfTasks:
-            print(stuff.name)
+            for stuff in priorityOfTasks:
+                print(f"{stuff.name} - {stuff.priority}")
