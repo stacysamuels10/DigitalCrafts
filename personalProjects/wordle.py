@@ -8,6 +8,7 @@
 # if letter is in same index spot at chosen word, full correct
 #if letter is in word but different index spot, half correct
 # if not there at all, incorrect
+import PyDictionary
 import random
 listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'award', 'basis', 'beach', 'birth', 'block', 'blood', 'board', \
@@ -41,12 +42,11 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'voice', 'waste', 'watch', 'water', 'while', 'white', 'whole',\
 'woman', 'world', 'youth']
 
-wordleWord = 'black'
+#wordleWord = random.choice(listOfWords)
 userGuess = ''
 result = [0, 0, 0, 0, 0]
 
 def wordArray (userGuess):
-#[0, 2, 2, 0, 2]
     a = 0
     b = 0
     for a in range(len(userGuess)):
@@ -60,13 +60,10 @@ def wordArray (userGuess):
                     result[a] = '2'
     return result
 
-
 def chooseCorrectWord (userGuess):
     if userGuess != wordleWord:
         wordArray(userGuess)
         print(result)
-
-#chooseCorrectWord()
 
 def numberOfGuesses ():
     i = 0
@@ -83,8 +80,8 @@ def numberOfGuesses ():
             counter-=1
         if len(userGuess) != 5:
             print("Please choose a 5 letter word")
-    print(wordleWord)
+    print(f'Bummer, you didnt get it. The word was {wordleWord}')
 
-numberOfGuesses()
-
-
+#numberOfGuesses()
+wordleWord = random.choice(pyDictionary)
+print(wordleWord)
