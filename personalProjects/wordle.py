@@ -42,20 +42,36 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'voice', 'waste', 'watch', 'water', 'while', 'white', 'whole',\
 'woman', 'world', 'youth']
 
-wordleWord = 'plant'
-userGuess = 'place'
+wordleWord = 'watcr'
+userGuess = 'range'
 
-def compareTestWords ():
+# def exatSpot ():
+#     a = 0
+#     result = []
+#     for a in range(len(userGuess)):
+#         if userGuess[a] == wordleWord[a]:
+#             result.append('2')
+#         else:
+#             result.append('0')
+#     print(result)
+#exactSpot()
+
+def yellowSpot ():
     a = 0
-    result = []
+    b = 0
+    result = [0, 0, 0, 0, 0]
     for a in range(len(userGuess)):
-        if userGuess[a] == wordleWord[a]:
-            result = result.append('2')
-        else:
-            result = result.append('0')
+        for b in range(len(userGuess)):
+            if userGuess[a] == wordleWord[b]:
+                if a != b:
+                    result.insert(a, '1')
+                elif a == b:
+                    result.append(a , '2')
+
     print(result)
 
-compareTestWords()
+yellowSpot()
+
 
 #wordleWord = random.choice(listOfWords)
 #userGuess = input("Choose a 5 letter word: \n")
