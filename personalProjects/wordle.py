@@ -63,27 +63,29 @@ def yellowSpot ():
     b = 0
     result = []
     for a in range(len(userGuess)):
+        if userGuess[a] not in wordleWord:
+           result.append('0')
         for b in range(len(userGuess)):
             if userGuess[a] == wordleWord[b]:
                 if a != b:
                     result.append('1')
                 if a == b:
                     result.append('2')
-        if userGuess[a] not in wordleWord:
-            result.append('0')
 
     print(result)
 
-# def noSpot ():
-#     userGuess = 'wangr'
-#     wordleWord = 'range'
-# #[0, 2, 2, 2, 1]
-#     a = 0
-#     b = 0
-#     result = []
-#     for a in range(len(userGuess)):
-#             if userGuess[a] not in wordleWord:
-#                 print()
+def noSpot ():
+    userGuess = 'wangr'
+    wordleWord = 'range'
+#[0, 2, 2, 2, 1]
+    a = 0
+    b = 0
+    result = []
+    for a in range(len(userGuess)):
+            if userGuess[a] not in wordleWord:
+               result.append('0')
+    print(result)
+
 
 
 yellowSpot()
