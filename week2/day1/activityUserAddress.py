@@ -5,6 +5,8 @@ class User:
         self.address = address
     def createNewAddress (self, stacyAddress):
         stacyUser.address.append(stacyAddress)
+    def changeFirstName(self, newName):
+        self.first_name = newName
 
 
 class Address:

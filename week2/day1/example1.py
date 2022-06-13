@@ -28,7 +28,7 @@ class Room:
         """
 
 room1 = Room("12x12x15", 2, 2, "tile", "The Streaming Room", ["Mic", "Mouse", "PC"])
-#print(room1.dimensions)
+print(room1.dimensions)
 
 # if room1.name == "The Streaming Room":
 #     print("Yup, this is where we stream")
