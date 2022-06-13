@@ -1,9 +1,10 @@
 class User:
-    def __init__ (self, first_name, last_name):
+    def __init__ (self, first_name, last_name, address=[]):
         self.first_name = first_name
         self.last_name = last_name
+        self.address = address
     
-stacyUser = User("Stacy", "Samuels")
+
 
 class Address:
     def __init__ (self, street, city, state, zip_code):
@@ -12,4 +13,8 @@ class Address:
         self.state = state
         self.zip_code = zip_code
 
-stacyUser = Address("NoWhereLand", "Baton Rouge", "LA", "11111")
+stacyUser = User("Stacy", "Samuels")
+stacyAddress = Address("NoWhereLand", "Baton Rouge", "LA", "11111")
+stacyUser.address.append(stacyAddress)
+
+print(stacyUser.address[0].street)
