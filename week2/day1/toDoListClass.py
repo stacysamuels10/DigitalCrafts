@@ -39,6 +39,7 @@ class Item:
 
 while choice != "q":
     choice = input("""
+    What would you like to do with your to do list?
     Press 1 to add task
     Press 2 to delete task
     Press 3 to view all tasks
