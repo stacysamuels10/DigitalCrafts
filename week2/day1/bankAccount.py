@@ -3,9 +3,9 @@ class BankAccount:
         self.balance = balance
         self.account_number = account_number
     def deposit (self, addMoney):
-        self.balance = self.balance + addMoney
+        self.balance = self.balance + Money
     def withdraw(self, addMoney):
-        self.balance = self.balance - addMoney
+        self.balance = self.balance - Money
     def transfer_funds (self, TransFunds, ToAccount, FromAccount):
         ToAccount.deposit(TransFunds)
         FromAccount.withdraw(TransFunds)
@@ -16,7 +16,7 @@ class BankAccount:
         """
 
 
-addMoney = 0
+Money = 0
 check_account = BankAccount(80, "3333")
 savings_account = BankAccount(60, "4444")
 
