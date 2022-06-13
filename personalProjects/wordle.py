@@ -43,7 +43,7 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 
 wordleWord = 'black'
 userGuess = 'wlank'
-result = []
+result = [0, 0, 0, 0, 0]
 
 def wordArray ():
 #[0, 2, 2, 0, 2]
@@ -51,13 +51,13 @@ def wordArray ():
     b = 0
     for a in range(len(userGuess)):
         if userGuess[a] not in wordleWord:
-           result.append('0')
+           result[a] = '0'
         for b in range(len(userGuess)):
             if userGuess[a] == wordleWord[b]:
                 if a != b:
-                    result.append('1')
+                    result[a] = '1'
                 if a == b:
-                    result.append('2')
+                    result[a] = '2'
     return result
 
 
@@ -68,7 +68,7 @@ def chooseCorrectWord ():
         wordArray()
         print(result)
 
-chooseCorrectWord()
+#chooseCorrectWord()
 
 def numberOfGuesses ():
     i = 0
@@ -83,6 +83,6 @@ def numberOfGuesses ():
         if len(userGuess) != 5:
             print("Please choose a 5 letter word")
 
-#numberOfGuesses()
+numberOfGuesses()
 
 
