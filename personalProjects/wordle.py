@@ -42,38 +42,32 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'voice', 'waste', 'watch', 'water', 'while', 'white', 'whole',\
 'woman', 'world', 'youth']
 
+def wordArray ():
+    userGuess = 'wangr'
+    wordleWord = 'range'
+#[0, 2, 2, 2, 1]
+    a = 0
+    b = 0
+    result = []
+    for a in range(len(userGuess)):
+        if userGuess[a] not in wordleWord:
+           result.append('0')
+        for b in range(len(userGuess)):
+            if userGuess[a] == wordleWord[b]:
+                if a != b:
+                    result.append('1')
+                if a == b:
+                    result.append('2')
+    print(result)
 
 
-# def exatSpot ():
-#     a = 0
-#     result = []
-#     for a in range(len(userGuess)):
-#         if userGuess[a] == wordleWord[a]:
-#             result.append('2')
-#         else:
-#             result.append('0')
-#     print(result)
-#exactSpot()
-
-# def wordArray ():
-#     userGuess = 'wangr'
-#     wordleWord = 'range'
-# #[0, 2, 2, 2, 1]
-#     a = 0
-#     b = 0
-#     result = []
-#     for a in range(len(userGuess)):
-#         if userGuess[a] not in wordleWord:
-#            result.append('0')
-#         for b in range(len(userGuess)):
-#             if userGuess[a] == wordleWord[b]:
-#                 if a != b:
-#                     result.append('1')
-#                 if a == b:
-#                     result.append('2')
-#     print(result)
-
-# wordArray()
+def chooseCorrectWord ():
+    word1 = 'black'
+    word2 = 'blank'
+    while word1 != word2:
+        wordArray()
+    if word1 == word2:
+        print('you win!')
 
 def numberOfGuesses ():
     word = 'blank'
@@ -82,6 +76,7 @@ def numberOfGuesses ():
     while i < 6:
         word = input("What 5 letter word do you want?")
         if len(word) == 5:
+            chooseCorrectWord()
             print(f"you have {counter} chances left")
             i+=1
             counter-=1
@@ -89,3 +84,5 @@ def numberOfGuesses ():
             print("Please choose a 5 letter word")
 
 numberOfGuesses()
+
+
