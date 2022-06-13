@@ -4,14 +4,14 @@ class User:
     # weight
     # siblings
     # greeting
-    def __init__(self, name, height):
+    def __init__(self, name, height, weight, siblings, greeting):
         self.name = name
         self.height = height
-        self.weight = "none of your business"
-        self.siblings = "Joe"
-        self.greeting = "Hey guys"
+        self.weight = weight
+        self.siblings = siblings
+        self.greeting = greeting
 
-rahmin = User("rahmin", "5.9" )
-Olivia = User("Olivia", "5.8")
-print(rahmin.name, rahmin.height)
-print(Olivia.name, Olivia.height)
+rahmin = User("rahmin", "5.9", "22", "Joe", "hello" )
+Olivia = User("Olivia", "5.8", "24", "Stacy", "hi" )
+print(rahmin.name, rahmin.height, rahmin.greeting)
+print(Olivia.User)

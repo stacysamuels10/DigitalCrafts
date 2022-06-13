@@ -35,6 +35,8 @@ the skeleton of that class and only that class
 
 `rahmin.name` this is called dot notation, used to call objects
 
-**init** is initializing the variables in the class, built in function to create a class ** function ** make it a very clear and different function
+`__init__` is initializing the variables in the class, built in function to create a class ** function ** make it a very clear and different function
 
 python devs have agreed to self instatiating the class.
+
+## classes can be used a characters in the game
