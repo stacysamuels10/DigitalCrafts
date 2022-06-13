@@ -42,10 +42,10 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 'woman', 'world', 'youth']
 
 wordleWord = 'black'
-userGuess = 'wlank'
+userGuess = ''
 result = [0, 0, 0, 0, 0]
 
-def wordArray ():
+def wordArray (userGuess):
 #[0, 2, 2, 0, 2]
     a = 0
     b = 0
@@ -61,11 +61,9 @@ def wordArray ():
     return result
 
 
-def chooseCorrectWord ():
-    if userGuess == wordleWord:
-        print('you win!')
-    else:
-        wordArray()
+def chooseCorrectWord (userGuess):
+    if userGuess != wordleWord:
+        wordArray(userGuess)
         print(result)
 
 #chooseCorrectWord()
@@ -75,13 +73,17 @@ def numberOfGuesses ():
     counter = 5
     while i < 6:
         userGuess = input("What 5 letter word do you want?\n")
+        if userGuess == wordleWord:
+            print('You Win!')
+            break
         if len(userGuess) == 5:
-            chooseCorrectWord()
+            chooseCorrectWord(userGuess)
             print(f"you have {counter} chances left")
             i+=1
             counter-=1
         if len(userGuess) != 5:
             print("Please choose a 5 letter word")
+    print(wordleWord)
 
 numberOfGuesses()
 
