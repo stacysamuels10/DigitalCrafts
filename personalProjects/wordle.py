@@ -60,27 +60,23 @@ def wordArray ():
                     result.append('2')
     print(result)
 
-
 def chooseCorrectWord ():
-    word1 = 'black'
-    word2 = 'blank'
-    while word1 != word2:
+    while userGuess != wordleWord:
         wordArray()
-    if word1 == word2:
+    if userGuess == wordleWord:
         print('you win!')
 
 def numberOfGuesses ():
-    word = 'blank'
     i = 0
     counter = 5
     while i < 6:
-        word = input("What 5 letter word do you want?")
-        if len(word) == 5:
+        userGuess = input("What 5 letter word do you want?")
+        if len(userGuess) == 5:
             chooseCorrectWord()
             print(f"you have {counter} chances left")
             i+=1
             counter-=1
-        if len(word) != 5:
+        if len(userGuess) != 5:
             print("Please choose a 5 letter word")
 
 numberOfGuesses()
