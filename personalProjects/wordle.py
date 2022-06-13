@@ -55,22 +55,34 @@ listOfWords = ['adult', 'agent', 'anger', 'apple', 'anger', 'apple', \
 #     print(result)
 #exactSpot()
 
-def wordArray ():
-    userGuess = 'wangr'
-    wordleWord = 'range'
-#[0, 2, 2, 2, 1]
-    a = 0
-    b = 0
-    result = []
-    for a in range(len(userGuess)):
-        if userGuess[a] not in wordleWord:
-           result.append('0')
-        for b in range(len(userGuess)):
-            if userGuess[a] == wordleWord[b]:
-                if a != b:
-                    result.append('1')
-                if a == b:
-                    result.append('2')
-    print(result)
+# def wordArray ():
+#     userGuess = 'wangr'
+#     wordleWord = 'range'
+# #[0, 2, 2, 2, 1]
+#     a = 0
+#     b = 0
+#     result = []
+#     for a in range(len(userGuess)):
+#         if userGuess[a] not in wordleWord:
+#            result.append('0')
+#         for b in range(len(userGuess)):
+#             if userGuess[a] == wordleWord[b]:
+#                 if a != b:
+#                     result.append('1')
+#                 if a == b:
+#                     result.append('2')
+#     print(result)
 
-wordArray()
+# wordArray()
+
+def numberOfGuesses ():
+    word = 'blank'
+    i = 0
+    counter = 5
+    while i < 6:
+        word = input("What 5 letter word do you want?")
+        print(f"you have {counter} chances left")
+        i+=1
+        counter-=1
+
+numberOfGuesses()
