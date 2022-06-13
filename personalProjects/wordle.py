@@ -81,8 +81,11 @@ def numberOfGuesses ():
     counter = 5
     while i < 6:
         word = input("What 5 letter word do you want?")
-        print(f"you have {counter} chances left")
-        i+=1
-        counter-=1
+        if len(word) == 5:
+            print(f"you have {counter} chances left")
+            i+=1
+            counter-=1
+        if len(word) != 5:
+            print("Please choose a 5 letter word")
 
 numberOfGuesses()
