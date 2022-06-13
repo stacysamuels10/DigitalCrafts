@@ -8,16 +8,24 @@ class Room:
     #name/type of room
     #contents
     def __init__(self, dimensions, windows, doors, flooring, name, contents): #self is always first argument
-        self.dimensions = dimensions
+        self.dimensions = dimensions #self.dimensions is a property or constructor
         self.windows = windows
         self.doors = doors
         self.flooring = flooring
         self.name = name
         self.contents = contents
-    def nameOfRoom(self):
+    def nameOfRoom(self): #functions inside of a class are called methods
         print(self.name)
     def lowerCaseRoomName(self):
         self.name = self.name.lower()
+    def __str__(self):
+        return f"""
+        {self.name}
+        {self.windows}
+        {self.doors}
+        {self.flooring}
+        {self.contents}
+        """
 
 room1 = Room("12x12x15", 2, 2, "tile", "The Streaming Room", ["Mic", "Mouse", "PC"])
 #print(room1.dimensions)
