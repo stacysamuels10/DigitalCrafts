@@ -22,10 +22,9 @@ def addItem():
 def removeItem():
     for stuff in listOfTasks:
         index = listOfTasks.index(stuff)
-        print((index+1), stuff.name)
+        print((index+1), stuff.name, stuff.priority)
     itemToRemove = int(input("Please type the number of the task you would like to remove\n"))
-    prioToRemove = itemToRemove
-    del listOfTasks[itemToRemove-1, prioToRemove]
+    del listOfTasks[itemToRemove-1]
     print("Your to dos:")
     for stuff in listOfTasks:
             print(f"{stuff.name} - {stuff.priority}")
