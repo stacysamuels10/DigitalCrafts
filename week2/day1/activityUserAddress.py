@@ -3,7 +3,8 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.address = address
-    
+    def createNewAddress (self, stacyAddress):
+        stacyUser.address.append(stacyAddress)
 
 
 class Address:
@@ -15,6 +16,8 @@ class Address:
 
 stacyUser = User("Stacy", "Samuels")
 stacyAddress = Address("NoWhereLand", "Baton Rouge", "LA", "11111")
-stacyUser.address.append(stacyAddress)
 
-print(stacyUser.address[0].street)
+
+
+stacyUser.createNewAddress(stacyAddress)
+print(stacyUser.address[0].zip_code)
