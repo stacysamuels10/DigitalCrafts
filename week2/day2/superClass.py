@@ -5,18 +5,21 @@ class Employee:
         self.role = role
     def talkAboutWork(self):
         print("Man, Mondays, am I right?")
-
-    rahmin = Employee("rahmin", "Engineering Group", "staff")
-    rayleigh = Employee("rayleigh", "Engineering Group", "staff")
-    carlos = Employee("carlos", "Engineering", "Engineering Group", "staff")
-    amanda = Employee("amanda", "Engineering", "Engineering Group", "staff")
-
 class SuperEmployee(Employee):
+    def __init__(self,name,department,role):
+        super().__init__(name,department,role) 
+        self.securityLevel = "top level" #this overrides the inheritance of employee class
     def leadAStandup(self):
         print("Hey guys, lets start our standup")
-    pass
+    def accessClientData(self):
+        print("Print out all the client data in a report")
 stacy = SuperEmployee("stacy", "Engineering Group", "staff III")
+rahmin = Employee("rahmin", "Engineering Group", "staff")
+rayleigh = Employee("rayleigh", "Engineering Group", "staff")
+amanda = Employee("amanda", "Engineering Group", "staff")
+
 stacy.talkAboutWork()
-carlos.talkAboutWork()
 stacy.leadAStandup()
-carlos.leadAStandup()
+print(stacy.securityLevel)
+
+
