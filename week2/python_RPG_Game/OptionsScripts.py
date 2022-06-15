@@ -18,3 +18,8 @@ def puzzleCounter (): #tested and works, need to append
     completedPuzzles = [0,1]
     for puzzle in completedPuzzles:
         puzzle+=1
+
+def backpack ():
+    backpackItems = ["Your wand", "Hogwarts Student Handbook",\
+     "Map of Library", "Beginner's Guide to Wand Motions" "Phone", \
+     "Post it Note", "UV Blacklight Flashlight"]
