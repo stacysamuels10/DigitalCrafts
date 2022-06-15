@@ -24,7 +24,10 @@ def backpack (openBackpack):
      "Map of Library", "Beginner's Guide to Wand Motions" "Phone", \
      "Post it Note", "UV Blacklight Flashlight"]
     if openBackpack == "1":
-        backpackChoice ="your wand is cool"
+        backpackChoice ="""
+    Your wand from Ollivander's is so cool
+    You just don't know how to use it yet.
+        """
         return backpackChoice
     if openBackpack == "2":
         backpackChoice = """
@@ -44,7 +47,8 @@ def backpack (openBackpack):
         return backpackChoice
     if openBackpack == "4":
         backpackChoice = """
-    A Beginner's Guide to Wand Motions"
+    A Beginner's Guide to Wand Motions
+
     This paper has pictures that show the different movements one makes with their wand to complete the different spells.
     Leviosa: Move your wand in a circle clockwise then down
     Expelliarmus: Move your wand to the side then down
@@ -74,7 +78,7 @@ Phone unlocked and shows a text exchange
     Jill: Dragon Rhymes and maps.  Off to the shelves to find them for us. 
 
     Shannon: Thanks!
-        """
+    """
         return backpackChoice
     if openBackpack == "6":
         backpackChoice = """
@@ -92,5 +96,5 @@ Phone unlocked and shows a text exchange
     twilifit and Tattings
     eeYlops owl emporium
     the leAky cauldron
-        """
+    """
         return backpackChoice

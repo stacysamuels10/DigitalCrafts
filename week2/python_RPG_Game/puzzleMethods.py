@@ -64,7 +64,25 @@ puzzle1()
 #     if menuChoice == 1:
 #         #something here
 #     if menuChoice == 2:
-#         #open backpack function
+#         backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
+    #  "3. Map of Library", "4. Beginner's Guide to Wand Motions"]
+    #     print("\n")
+    #     for item in backpackItems:
+    #         print(item)
+    #     openBackpack = input("\nWhat backpack item do you want?\n")
+    #     backpackChoice = OptionsScripts.backpack(openBackpack)
+    #     while openBackpack.isnumeric() == False:
+    #         print("\nPlease choose a number\n")
+    #         openBackpack = input("\nWhat backpack item do you want?\n")
+    #     backpackChoice = OptionsScripts.backpack(openBackpack)
+    #     if openBackpack != "1" or openBackpack != "2" or \
+    #     openBackpack != "3" or openBackpack != "4":
+    #         print("Please choose a number between 1 and 4")
+    #         openBackpack = input("\nWhat backpack item do you want?\n")
+    #     if openBackpack == "1" or openBackpack == "2" or \
+    #     openBackpack == "3" or openBackpack == "4":
+    #         backpackChoice = OptionsScripts.backpack(openBackpack)
+    #         print(backpackChoice)
 #     if menuChoice == 3:
 #         #something here
 
@@ -83,7 +101,26 @@ puzzle1()
 #     if menuChoice == 1:
 #         #something here
 #     if menuChoice == 2:
-#         #open backpack function
+    #     backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
+    #  "3. Map of Library", "4. Beginner's Guide to Wand Motions", \
+    #  "5. Post-It Note"]
+    #     print("\n")
+    #     for item in backpackItems:
+    #         print(item)
+    #     openBackpack = input("\nWhat backpack item do you want?\n")
+    #     backpackChoice = OptionsScripts.backpack(openBackpack)
+    #     while openBackpack.isnumeric() == False:
+    #         print("\nPlease choose a number\n")
+    #         openBackpack = input("\nWhat backpack item do you want?\n")
+    #     backpackChoice = OptionsScripts.backpack(openBackpack)
+    #     if openBackpack != "1" or openBackpack != "2" or \
+    #     openBackpack != "3" or openBackpack != "4" or openBackpack != "5":
+    #         print("Please choose a number between 1 and 5")
+    #         openBackpack = input("\nWhat backpack item do you want?\n")
+    #     if openBackpack == "1" or openBackpack == "2" or \
+    #     openBackpack == "3" or openBackpack == "4" or openBackpack == "5":
+    #         backpackChoice = OptionsScripts.backpack(openBackpack)
+    #         print(backpackChoice)
 #     if menuChoice == 3:
 #         #something here
 
