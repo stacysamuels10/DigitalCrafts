@@ -30,12 +30,18 @@ def puzzle1 ():
         for item in backpackItems:
             print(item)
         openBackpack = input("\nWhat backpack item do you want?\n")
+        backpackChoice = OptionsScripts.backpack(openBackpack)
         while openBackpack.isnumeric() == False:
             print("\nPlease choose a number\n")
             openBackpack = input("\nWhat backpack item do you want?\n")
         backpackChoice = OptionsScripts.backpack(openBackpack)
-        while backpackChoice != "1" or backpackChoice != "2" or \
-        backpackChoice != "3" or backpackChoice != "4":
+        if openBackpack != "1" or openBackpack != "2" or \
+        openBackpack != "3" or openBackpack != "4":
+            print("Please choose a number between 1 and 4")
+            openBackpack = input("\nWhat backpack item do you want?\n")
+        if openBackpack == "1" or openBackpack == "2" or \
+        openBackpack == "3" or openBackpack == "4":
+            backpackChoice = OptionsScripts.backpack(openBackpack)
             print(backpackChoice)
     #if menuChoice == 3:
         #something here
