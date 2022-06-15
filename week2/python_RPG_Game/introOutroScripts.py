@@ -1,6 +1,6 @@
 import random
 from time import sleep
-def introLetter():
+def introLetter(): #tested and works
     name = input("Hello wizard! Please enter your name!\n")
     sleep(1)
     print(f"""Welcome to Hogwarts School of Witchcraft 
@@ -16,24 +16,24 @@ def introLetter():
     sleep(.7)
     print(f"Hence forward you will be known as {name}")
 
-#introLetter()
-
 def introToGame():
     print("You’ve accepted your invitation to Hogwarts and finally attend as a student.")
-    sleep(.7)
-    print("""
-    It's your first week and after 
-    staying up late in a new friends dorm, 
-    you realize they have played a prank on you 
-    and enchanted the room so you can't get out.
-    """)
-    sleep(.7)
-    print("""
-    You have your backpack but 
-    the rest of the room is new and different. 
-    You look at your watch.
-    You have an hour before your first class of Potions.
-    """)
-    sleep(.7)
+    sleep(2.4)
+    print("It's your first week and after ")
+    sleep(1.2)
+    print("staying up late in a new friends dorm, ")
+    sleep(1.2)
+    print("you realize they have played a prank on you ")
+    sleep(1.2)
+    print("and enchanted the room so you can't get out.\n")
+    sleep(2.7)
+    print("You have your backpack but ")
+    sleep(1.2)
+    print("the rest of the room is new and different. ")
+    sleep(1.2)
+    print("You look at your watch. ")
+    sleep(1.2)
+    print("You have an hour before your first class of Potions. ")
+    sleep(1.2)
 
-    introToGame()
+introToGame()
