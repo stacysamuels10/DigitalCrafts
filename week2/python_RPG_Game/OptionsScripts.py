@@ -1,20 +1,10 @@
-def menuOptions (): #test and works    
-    listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
-    whatNext = ""
-    choice = ""
-    print("\n")
-    for items in listOfMenuOptions:
-        print(items)
-    while whatNext != "4":
-        whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
-        if whatNext.isnumeric() == False:
-            print("\nPlease choose a number\n")
+def menuOptions (whatNext): #test and works    
         if whatNext == "1":
-            break
+            return menuChoice == 1
         if whatNext == "2":
-            break
+            return menuChoice == 2
         if whatNext =="3":
-            break
+            return menuChoice == 3
     if whatNext == "4":
         print("\nThank you for playing! Bye\n")
 

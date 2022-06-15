@@ -10,10 +10,10 @@ def puzzle1 ():
         print(items)
     success = False
     whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
-        if whatNext.isnumeric() == False:
-            print("\nPlease choose a number\n")
+    if whatNext.isnumeric() == False:
+        print("\nPlease choose a number\n")
     menuChoice = OptionsScripts.menuOptions(whatNext)
-    if whatNext == "1":
+    if menuChoice == 1:
         print("success!")
 
 puzzle1()
