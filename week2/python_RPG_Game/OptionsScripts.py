@@ -19,9 +19,15 @@ def puzzleCounter (): #tested and works, need to append
     for puzzle in completedPuzzles:
         puzzle+=1
 
-def backpack ():
+def backpack (openBackpack):
     backpackItems = ["Your wand", "Hogwarts Student Handbook",\
      "Map of Library", "Beginner's Guide to Wand Motions" "Phone", \
      "Post it Note", "UV Blacklight Flashlight"]
-    for item in backpackItems:
-        print(item)
+    if openBackpack == "1"
+    if openBackpack == "2"
+    if openBackpack == "3"
+    if openBackpack == "4"
+    if openBackpack == "5"
+    if openBackpack == "6"
+    if openBackpack == "7"
+

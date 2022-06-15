@@ -23,15 +23,14 @@ def puzzle1 ():
     #if menuChoice == 1:
         #something here
     if menuChoice == 2:
-        backpackItems = ["Your wand", "Hogwarts Student Handbook",\
-     "Map of Library", "Beginner's Guide to Wand Motions"]
+        backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
+     "3. Map of Library", "4. Beginner's Guide to Wand Motions"]
         for item in backpackItems:
             print(item)
         openBackpack = input("\nWhat backpack item do you want?\n")
-        OptionsScripts.backpack(openBackpack)
-    if whatNext.isnumeric() == False:
+        if openBackpack.isnumeric() == False:
         print("\nPlease choose a number\n")
-    backpackChoice = OptionsScripts.menuOptions(whatNext)
+        backpackChoice = OptionsScripts.menuOptions(openBackpack)
     #if menuChoice == 3:
         #something here
     
