@@ -1,4 +1,4 @@
-def menuOptions ():
+def menuOptions (): #test and works
     listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
     whatNext = ""
     print("\n")
@@ -22,5 +22,5 @@ def menuOptions ():
             print("\nthis is where you will show the current spell level\n")
             break
     if whatNext == "4":
-        print("Thank you for playing!")
+        print("\nThank you for playing! Bye\n")
 menuOptions()
