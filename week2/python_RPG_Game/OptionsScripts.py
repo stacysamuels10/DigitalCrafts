@@ -23,4 +23,19 @@ def menuOptions (): #test and works
             break
     if whatNext == "4":
         print("\nThank you for playing! Bye\n")
-menuOptions()
+
+
+def puzzleCounter (): #tested and works, need to append
+    puzzle = 0 #at the end of each puzzle
+    completedPuzzles = [0,1]
+    for puzzle in completedPuzzles:
+        puzzle+=1
+    print(puzzle)
+
+puzzleCounter()
+
+class Backpack:
+    def __init__(self, wand, studentHandbook):
+        self.wand = wand
+        self.studentHandbook = studentHandbook
+
