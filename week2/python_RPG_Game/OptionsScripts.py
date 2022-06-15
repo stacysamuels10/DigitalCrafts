@@ -23,3 +23,5 @@ def backpack ():
     backpackItems = ["Your wand", "Hogwarts Student Handbook",\
      "Map of Library", "Beginner's Guide to Wand Motions" "Phone", \
      "Post it Note", "UV Blacklight Flashlight"]
+    for item in backpackItems:
+        print(item)
