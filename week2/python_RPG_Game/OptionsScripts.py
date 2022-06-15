@@ -30,12 +30,10 @@ def puzzleCounter (): #tested and works, need to append
     completedPuzzles = [0,1]
     for puzzle in completedPuzzles:
         puzzle+=1
-    print(puzzle)
-
-puzzleCounter()
 
 class Backpack:
     def __init__(self, wand, studentHandbook):
         self.wand = wand
         self.studentHandbook = studentHandbook
+
 
