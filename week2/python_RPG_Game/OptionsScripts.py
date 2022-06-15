@@ -46,7 +46,9 @@ class Backpack:
 
 def backpackAccess():
     choice = ""
-    print("q to exit backpack")
+    print("""Which tool do you want to use?
+    Enter the number
+    q to exit backpack""")
     while choice != "q":
         for tool in listOfTools:
             indexOfTools = listOfTools.index(tool)
@@ -60,3 +62,4 @@ def backpackAccess():
             1 Sickle equals 29 Knuts
             """)
 
+backpackAccess()
