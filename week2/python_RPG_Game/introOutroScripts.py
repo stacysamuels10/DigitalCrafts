@@ -16,8 +16,9 @@ def introLetter(): #tested and works
     sleep(.7)
     print(f"Hence forward you will be known as {name}")
 
-def introToGame():
-    print("You’ve accepted your invitation to Hogwarts and finally attend as a student.")
+def introToGame(): #tested and works
+    print("\nYou’ve accepted your invitation to Hogwarts and finally attend as a student.")
+    print("\n===========================================================\n")
     sleep(2.4)
     print("It's your first week and after ")
     sleep(1.2)
@@ -25,7 +26,9 @@ def introToGame():
     sleep(1.2)
     print("you realize they have played a prank on you ")
     sleep(1.2)
-    print("and enchanted the room so you can't get out.\n")
+    print("and enchanted the room so you can't get out.")
+    sleep(.7)
+    print("\n===========================================================\n")
     sleep(2.7)
     print("You have your backpack but ")
     sleep(1.2)
@@ -35,5 +38,6 @@ def introToGame():
     sleep(1.2)
     print("You have an hour before your first class of Potions. ")
     sleep(1.2)
+    print("\n===========================================================\n")
 
 introToGame()
