@@ -31,35 +31,8 @@ def puzzleCounter (): #tested and works, need to append
     for puzzle in completedPuzzles:
         puzzle+=1
 
-puzzle = 0
-
-listOfTools = ["Wand", "Student Handbook"]
-
-def addPhone():
-    newTool = Backpack("phone")
-    listOfTools.append(newTool)
-
 class Backpack:
     def __init__(self, items):
-        self.tools = tools
-
-
-def backpackAccess():
-    choice = ""
-    print("""Which tool do you want to use?
-    Enter the number
-    q to exit backpack""")
-    while choice != "q":
-        for tool in listOfTools:
-            indexOfTools = listOfTools.index(tool)
-            print((indexOfTools+1), tool.tools)
-        if choice == "1":
-            print("wand")
-        if choice == "2":
-            print("""
-            1 Galleon equals 17 Sickles
-            1 Galleon equals 493 Knuts
-            1 Sickle equals 29 Knuts
-            """)
-
-backpackAccess()
+        self.name = name
+        self.spellStrength = spellStrength
+        self.puzzleCounter = puzzleCounter
