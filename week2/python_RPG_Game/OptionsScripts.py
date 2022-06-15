@@ -1,10 +1,14 @@
 def menuOptions (whatNext): #test and works    
-        if whatNext == "1":
-            return menuChoice == 1
-        if whatNext == "2":
-            return menuChoice == 2
-        if whatNext =="3":
-            return menuChoice == 3
+    menuChoice = 0
+    if whatNext == "1":
+        menuChoice = 1
+        return menuChoice
+    if whatNext == "2":
+        menuChoice = 2
+        return menuChoice
+    if whatNext =="3":
+        menuChoice = 3
+        return menuChoice
     if whatNext == "4":
         print("\nThank you for playing! Bye\n")
 

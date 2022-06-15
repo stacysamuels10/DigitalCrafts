@@ -1,10 +1,9 @@
 import OptionsScripts
 
-whatNext = ""
 def puzzle1 ():
     listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
     whatNext = ""
-    choice = ""
+    menuChoice = 0
     print("\n")
     for items in listOfMenuOptions:
         print(items)
