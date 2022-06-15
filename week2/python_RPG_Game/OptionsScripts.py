@@ -3,26 +3,26 @@ def menuOptions (): #test and works
     whatNext = ""
     print("\n")
     for items in listOfMenuOptions:
-            print(items)
-    while whatNext != "4":
-        whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
-        for items in listOfMenuOptions:
-            print(items)
-        if whatNext.isnumeric() == False:
-            print("\nPlease choose a number\n")
-            # for items in listOfMenuOptions:
-            #     print(items)
-        if whatNext == "1":
-            print("\nthis is where you will put the puzzle number method\n")
-            break
-        if whatNext == "2":
-            print("\nthis is where you will put the backpack class\n")
-            break
-        if whatNext =="3":
-            print("\nthis is where you will show the current spell level\n")
-            break
-    if whatNext == "4":
-        print("\nThank you for playing! Bye\n")
+        print(items)
+    # while whatNext != "4":
+    #     whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
+    #     for items in listOfMenuOptions:
+    #         print(items)
+    #     if whatNext.isnumeric() == False:
+    #         print("\nPlease choose a number\n")
+    #         # for items in listOfMenuOptions:
+    #         #     print(items)
+    #     if whatNext == "1":
+    #         print("\nthis is where you will put the puzzle number method\n")
+    #         break
+    #     if whatNext == "2":
+    #         print("\nthis is where you will put the backpack class\n")
+    #         break
+    #     if whatNext =="3":
+    #         print("\nthis is where you will show the current spell level\n")
+    #         break
+    # if whatNext == "4":
+    #     print("\nThank you for playing! Bye\n")
 
 
 def puzzleCounter (): #tested and works, need to append
@@ -30,9 +30,3 @@ def puzzleCounter (): #tested and works, need to append
     completedPuzzles = [0,1]
     for puzzle in completedPuzzles:
         puzzle+=1
-
-class Backpack:
-    def __init__(self, items):
-        self.name = name
-        self.spellStrength = spellStrength
-        self.puzzleCounter = puzzleCounter
