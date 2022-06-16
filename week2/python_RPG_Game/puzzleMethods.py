@@ -5,6 +5,9 @@ whatNext = ""
 backpackChoice = ""
 menuChoice = 0
 
+
+
+    
 # def cutSceneOne():
 # print("""\nbookself, see map of library and brochure, 
 #     you put both in your backpack
@@ -47,19 +50,23 @@ menuChoice = 0
 #         #something here
 
 def puzzle1 ():
-    sleep(2)
-    listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
-    print("\n")
-    for items in listOfMenuOptions:
-        print(items)
     success = False
-    whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
-    while whatNext.isnumeric() == False:
-        print("\nPlease choose a number\n")
-        whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
+    whatNext = OptionsScripts.invokeMenuOptions()
     menuChoice = OptionsScripts.menuOptions(whatNext)
-    #if menuChoice == 1:
-        #something here
+    # if menuChoice == 1:
+    #     print("""
+    # You walk up to the locked cabinet.
+    # It has a number 1-9 keypad and 4 blanks
+    # Maybe things in your backpack can be pieced together?        
+    #     """)
+    #     sleep(2)
+    #     puzzle1Code = int(input("Enter the code: "))
+    #     while puzzle1Code.isnumeric() == False:
+    #         print("\nPlease choose a number\n")
+    #         puzzle1Code = int(input("Enter the code: "))
+    #     while puzzle1Code != 1300:
+    #         print("That is not the code. Please try again. The spell power increases with each incorrect guess")
+    #         # increase spell counter
     if menuChoice == 2:
         backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
      "3. Map of Library", "4. Beginner's Guide to Wand Motions", "5. Phone"]

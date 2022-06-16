@@ -6,12 +6,24 @@ def menuOptions (whatNext): #test and works
     if whatNext == "2":
         menuChoice = 2
         return menuChoice
-    if whatNext =="3":
+    if whatNext == "3":
         menuChoice = 3
         return menuChoice
     if whatNext == "4":
         print("\nThank you for playing! Bye\n")
 
+def invokeMenuOptions ():
+    listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
+    print("\n")
+    for items in listOfMenuOptions:
+        print(items)
+    whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
+    while whatNext.isnumeric() == False:
+        print("\nPlease choose a number\n")
+        for items in listOfMenuOptions:
+            print(items)
+        whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
+    return whatNext
 
 def puzzleCounter (): #tested and works, need to append
     puzzle = 0 #at the end of each puzzle
