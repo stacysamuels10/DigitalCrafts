@@ -1,5 +1,9 @@
 import random
 from time import sleep
+import backpackScripts
+import puzzleMethods
+import OptionsScripts
+
 def introLetter(): #tested and works
     name = input("Hello wizard! Please enter your name!\n")
     sleep(1)
@@ -40,7 +44,16 @@ def introToGame(): #tested and works
     sleep(1.2)
     print("\n===========================================================\n")
 
-def spellIncrease ():
+success = 0
+puzzleCountList = []
+puzzleCounter = 0
+
+    def spellDecrease ():
+    def spellIncrease ():
+    def puzzleCounter ():
+        for count in puzzleCountList:
+            puzzleCounter += 1
+
 
 
 class EscapeRoom:
@@ -48,3 +61,6 @@ class EscapeRoom:
         self.name = name
         self.spellStrength = spellStrength
         self.puzzleCounter = puzzleCounter
+
+user = EscapeRoom(name, 100, 0)
+escapeFromHogwarts()
