@@ -32,9 +32,6 @@ def puzzleCounter (): #tested and works, need to append
         puzzle+=1
 
 def backpack (openBackpack):
-    backpackItems = ["Your wand", "Hogwarts Student Handbook",\
-     "Map of Library", "Beginner's Guide to Wand Motions" "Phone", \
-     "Post it Note", "UV Blacklight Flashlight"]
     if openBackpack == "1":
         backpackChoice ="""
     Your wand from Ollivander's is so cool

@@ -2,7 +2,7 @@ import OptionsScripts
 from time import sleep
 
 whatNext = ""
-backpackChoice = ""
+openBackpack = ""
 menuChoice = 0
 
 
@@ -75,18 +75,21 @@ def puzzle1 ():
             print(item)
         openBackpack = input("\nWhat backpack item do you want?\n")
         backpackChoice = OptionsScripts.backpack(openBackpack)
-        while openBackpack.isnumeric() == False:
-            print("\nPlease choose a number\n")
-            openBackpack = input("\nWhat backpack item do you want?\n")
-        backpackChoice = OptionsScripts.backpack(openBackpack)
-        if openBackpack != "1" or openBackpack != "2" or \
-        openBackpack != "3" or openBackpack != "4" or openBackpack != "5":
-            print("Please choose a number between 1 and 5")
-            openBackpack = input("\nWhat backpack item do you want?\n")
         if openBackpack == "1" or openBackpack == "2" or \
         openBackpack == "3" or openBackpack == "4" or openBackpack == "5":
             backpackChoice = OptionsScripts.backpack(openBackpack)
             print(backpackChoice)
+        while openBackpack.isnumeric() == False:
+            for item in backpackItems:
+                print(item)
+            print("\nPlease choose a number\n")
+            openBackpack = input("\nWhat backpack item do you want?\n")
+        backpackChoice = OptionsScripts.backpack(openBackpack)
+        while openBackpack != "1" or openBackpack != "2" or openBackpack != "3" or openBackpack != "4" or openBackpack != "5":
+            print(openBackpack)
+            print("Please choose a number between 1 and 5")
+            openBackpack = input("\nWhat backpack item do you want?\n")
+        backpackChoice = OptionsScripts.backpack(openBackpack)
     #if menuChoice == 3:
         #something here
     
@@ -170,7 +173,7 @@ puzzle1()
 #     if menuChoice == 3:
 #         #something here
 
-# def cutSceneTwo():
+# def cutSceneThree():
 
 # def puzzle4 ():
 #     listOfMenuOptions = ["1. Look around the room", "2. Open my backpack", "3. Try the door", "4. Quit the game"]
