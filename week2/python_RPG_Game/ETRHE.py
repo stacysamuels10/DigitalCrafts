@@ -57,13 +57,13 @@ def introToGame(): #tested and works
 def spellStrengthChange (completedPuzzles, spellStrength, incorrectGuess):
     for i in completedPuzzles:
         user.spellStrength = user.spellStrength - 30
-    print(user.completedPuzzles, user.spellStrength, incorrectGuess)
+    # print(user.completedPuzzles, user.spellStrength, incorrectGuess)
     if spellStrength < 0:
         success = True
-    for i in incorrectGuess:
+    for i in range(incorrectGuess):
         user.spellStrength += 10
-    print(user.spellStrength)
-    print(incorrectGuess)
+    # print(user.spellStrength)
+    # print(incorrectGuess)
 
 
 class EscapeRoom:
