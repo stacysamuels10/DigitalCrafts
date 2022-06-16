@@ -50,6 +50,7 @@ def introToGame(): #tested and works
     print("You have an hour before your first class of Potions. ")
     #sleep(1.2)
     print("\n===========================================================\n")
+    #add cut scene 1
 
 
 
