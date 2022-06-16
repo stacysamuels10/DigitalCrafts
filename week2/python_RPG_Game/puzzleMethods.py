@@ -49,7 +49,7 @@ menuChoice = 0
 #     #if menuChoice == 3:
 #         #something here
 
-def puzzle1 ():
+def story1 ():
     success = False
     puzzle1Code = ""
     whatNext = OptionsScripts.invokeMenuOptions()
@@ -78,7 +78,7 @@ def puzzle1 ():
             whatNext = OptionsScripts.invokeMenuOptions()
             menuChoice = OptionsScripts.menuOptions(whatNext)
     while menuChoice == 2:
-        
+
     whatNext = OptionsScripts.invokeMenuOptions()
     menuChoice = OptionsScripts.menuOptions(whatNext)
     print(menuChoice)
