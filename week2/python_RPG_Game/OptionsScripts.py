@@ -1,3 +1,5 @@
+from time import sleep
+
 def menuOptions (whatNext): #test and works    
     menuChoice = 0
     if whatNext == "1":
@@ -25,40 +27,47 @@ def invokeMenuOptions ():
         whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
     return whatNext
 
-def puzzleCounter (): #tested and works, need to append
-    puzzle = 0 #at the end of each puzzle
-    completedPuzzles = [0,1]
+def puzzleCount (): #tested and works, need to append
+    puzzleCounter = 0 #at the end of each puzzle
+    completedPuzzles = []
     for puzzle in completedPuzzles:
         puzzle+=1
+        
 
 
 def puzzle1():
     success = False
+    puzzle1Code = ""
+    tryTheCode = ""
     print("""
         You walk up to the locked cabinet.
         It has a number 1-9 keypad and 4 blanks
+        It says Library below it.
         Maybe things in your backpack can be pieced together?        
             """)
-            sleep(2)
-            tryTheCode = ""
+    sleep(2)
+    tryTheCode = input("Would you like to 1. Enter the code to solve the puzzle or 2. View the menu? ")
+    if tryTheCode == "2":
+        return
+    while tryTheCode != "1" and tryTheCode != "2":
+        print("Please enter 1 or 2")
+        tryTheCode = input("Would you like to 1. Enter the code to sovle the puzzle or 2. View the menu? ")
+    while tryTheCode == "1":
+        puzzle1Code = input("Enter the code: ")
+        while puzzle1Code != "1300":
+            print("That is not the code. Please try again.\
+        The spell power increases with each incorrect guess\n \
+        It should be a 4 digit number")
             tryTheCode = input("Would you like to 1. Enter the code to sovle the puzzle or 2. View the menu? ")
-            while tryTheCode != "1" and tryTheCode != "2":
-                print("Please enter 1 or 2")
-                tryTheCode = input("Would you like to 1. Enter the code to sovle the puzzle or 2. View the menu? ")
-            if tryTheCode == "1":
-                puzzle1Code = input("Enter the code: ")
-                if puzzle1Code == "1300"
-                    print("""Success! Cabinet cracks open and 
-                    you hear a soft rumble through the floor, 
-                    that must be the spell easing up
-                    """)
-                    success = True
-                    return success
-")
-                while puzzle1Code.isnumeric() == False:
-                    print("\nPlease choose a number\n")
-                    puzzle1Code = input("Enter the code: ")
-                while puzzle1Code != "1300":
-                    print("That is not the code. Please try again. The spell power increases with each incorrect guess")
+            if tryTheCode == "2":
+                return
+            puzzle1Code = input("Enter the code: ")
+            if puzzle1Code == "1300":
+                print("""Success! Cabinet cracks open and 
+            you hear a soft rumble through the floor, 
+            that must be the spell easing up
+            """)
+                success = True
+                return
                     # increase spell counter
 

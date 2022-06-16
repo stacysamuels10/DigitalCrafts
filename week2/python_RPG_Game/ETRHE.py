@@ -41,10 +41,10 @@ def introToGame(): #tested and works
     print("\n===========================================================\n")
 
 def spellIncrease ():
-    
+
 
 class EscapeRoom:
     def __init__(self, name, spellStrength, puzzleCounter):
         self.name = name
         self.spellStrength = spellStrength
-        self.puzzleCounter = puzzleCounter 
+        self.puzzleCounter = puzzleCounter
