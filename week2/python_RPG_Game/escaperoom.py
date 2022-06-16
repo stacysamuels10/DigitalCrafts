@@ -29,6 +29,7 @@ def gameLoop ():
             if choice == "1":
                 OptionsScripts.puzzle1(user.completedPuzzles, user.incorrectGuesses)  
                 print("story 1 is gonna run yaaaaaay")
+                print(user.incorrectGuesses)
                 # user.completedPuzzles = [1]
             if choice == "2":
                 print("this is where we check the backpack")
