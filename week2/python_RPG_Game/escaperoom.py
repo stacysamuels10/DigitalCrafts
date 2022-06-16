@@ -181,3 +181,13 @@ else:
     You could not get out, and Ms. McGonagall had to come and get you. 
     You missed your first day of Potions. 
     Better luck next time. """)
+
+
+playAgain = ""
+playAgain = input("want to play again? Y/N")
+while True:
+    if playAgain.lower() == "y":
+        gameLoop()
+    if playAgain.lower() == "n":
+        print("Okay thanks for playing!")
+        break
