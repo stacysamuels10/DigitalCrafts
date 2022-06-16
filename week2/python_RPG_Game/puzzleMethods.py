@@ -23,10 +23,9 @@ def story1 ():
             whatNext = OptionsScripts.invokeMenuOptions()
             menuChoice = OptionsScripts.menuOptions(whatNext)
         if menuChoice == 3:
-            print("This is where score will go")
+            return menuChoice
         if menuChoice == 4:
-            print("okay bye!")
-            break
+            return menuChoice
 
 story1()
 def story2 ():

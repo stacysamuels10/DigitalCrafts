@@ -1,4 +1,5 @@
 from time import sleep
+incorrectGuess = 0
 
 def menuOptions (whatNext): #test and works    
     menuChoice = 0
@@ -27,13 +28,7 @@ def invokeMenuOptions ():
             print(items)
         whatNext = input("\nWhat do you want to do next? Type the number to select an option\n")
     return whatNext
-
-def puzzleCount (): #tested and works, need to append
-    puzzleCounter = 0 #at the end of each puzzle
-    completedPuzzles = []
-    for puzzle in completedPuzzles:
-        puzzle+=1
-        
+      
 
 
 def puzzle1():
@@ -60,12 +55,13 @@ def puzzle1():
             you hear a soft rumble through the floor, 
             that must be the spell easing up
             """)
-            success = True
-            return success
+            completedPuzzles.append(1)
+            return completedPuzzles, incorrectGuess
         while puzzle1Code != "1300":
             print("That is not the code. Please try again.\
         The spell power increases with each incorrect guess\n \
         It should be a 4 digit number")
+            incorrectGuess += 1
             tryTheCode = input("Would you like to 1. Enter the code to sovle the puzzle or 2. View the menu? ")
             if tryTheCode == "2":
                 return

@@ -44,16 +44,26 @@ def introToGame(): #tested and works
     sleep(1.2)
     print("\n===========================================================\n")
 
-success = 0
-puzzleCountList = []
+success = False
+
 puzzleCounter = 0
-
-    def spellDecrease ():
-    def spellIncrease ():
-    def puzzleCounter ():
-        for count in puzzleCountList:
-            puzzleCounter += 1
-
+spellStrength = 100
+        
+def puzzleCounter (completedPuzzles):
+    PuzzleFinished = 0
+    for puzzle in completedPuzzles:
+        puzzleCounter += 1
+    return puzzleCounter
+def spellDecrease ():
+    for i in range(puzzleCounter):
+        spellStrength -= 30
+    if spellDecrease < 0:
+        success = True
+        return spellStrength, success
+def spellIncrease (incorrectGuess):
+    for i in range(incorrectGuess):
+        spellStrength += 10
+        return spellStrength
 
 
 class EscapeRoom:
@@ -62,5 +72,7 @@ class EscapeRoom:
         self.spellStrength = spellStrength
         self.puzzleCounter = puzzleCounter
 
-user = EscapeRoom(name, 100, 0)
-escapeFromHogwarts()
+while choice != menuChoice 4:
+    user = EscapeRoom(name, 100, 0)
+    whatNext = OptionsScripts.invokeMenuOptions()
+    menuChoice = OptionsScripts.menuOptions(whatNext)
