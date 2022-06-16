@@ -93,8 +93,8 @@ def gameLoop ():
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 break
+        choice = mainMenu()
         while user.completedPuzzles == 1:
-            choice = mainMenu()
             if choice == "1":  
                 outcomePuzzle2 = OptionsScripts.puzzle2(user.completedPuzzles, user.spellStrength)   
                 if outcomePuzzle2 == True:
@@ -116,8 +116,8 @@ def gameLoop ():
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 break
+        choice = mainMenu()
         while user.completedPuzzles == 2:
-            choice = mainMenu()
             if choice == "1":  
                 outcomePuzzle3 = OptionsScripts.puzzle3(user.completedPuzzles, user.spellStrength)   
                 if outcomePuzzle3 == True:
@@ -140,8 +140,8 @@ def gameLoop ():
                 print("Thank you for playing. Bye!")
                 break
 # WINNER CASE -- modify to number of puzzles you want
+        choice = mainMenu()
         while user.completedPuzzles == 3:
-            choice = mainMenu()
             if choice == "1":  
                 outcomePuzzle4 = OptionsScripts.puzzle4(user.completedPuzzles, user.spellStrength)   
                 if outcomePuzzle4 == True:
