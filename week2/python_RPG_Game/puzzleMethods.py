@@ -78,32 +78,10 @@ def puzzle1 ():
             whatNext = OptionsScripts.invokeMenuOptions()
             menuChoice = OptionsScripts.menuOptions(whatNext)
     while menuChoice == 2:
-        backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
-     "3. Map of Library", "4. Beginner's Guide to Wand Motions", "5. Phone"]
-        print("\n")
-        for item in backpackItems:
-            print(item)
-        openBackpack = input("\nWhat backpack item do you want?\n")
-        backpackChoice = OptionsScripts.backpack(openBackpack)
-        while openBackpack.isnumeric() == False:
-            for item in backpackItems:
-                print(item)
-            print("\nPlease choose a number\n")
-            openBackpack = input("\nWhat backpack item do you want?\n")
-        backpackChoice = OptionsScripts.backpack(openBackpack)
-        while openBackpack != "1" and openBackpack != "2" \
-        and openBackpack != "3" and openBackpack != "4" and openBackpack != "5":
-            print("Please choose a number between 1 and 5")
-            openBackpack = input("\nWhat backpack item do you want?\n")
-        backpackChoice = OptionsScripts.backpack(openBackpack)
-        while openBackpack == "1" or openBackpack == "2" or \
-        openBackpack == "3" or openBackpack == "4" or openBackpack == "5":
-            backpackChoice = OptionsScripts.backpack(openBackpack)
-            print(backpackChoice)
-            break
-        break
+        
     whatNext = OptionsScripts.invokeMenuOptions()
     menuChoice = OptionsScripts.menuOptions(whatNext)
+    print(menuChoice)
 
     #if menuChoice == 3:
         #something here
@@ -126,25 +104,7 @@ puzzle1()
 #     if menuChoice == 1:
 #         #something here
 #     if menuChoice == 2:
-    #     backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
-    #  "3. Map of Library", "4. Beginner's Guide to Wand Motions", "5. Phone"]
-    #     print("\n")
-    #     for item in backpackItems:
-    #         print(item)
-    #     openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     while openBackpack.isnumeric() == False:
-    #         print("\nPlease choose a number\n")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     if openBackpack != "1" or openBackpack != "2" or \
-    #     openBackpack != "3" or openBackpack != "4" or openBackpack != "5":
-    #         print("Please choose a number between 1 and 5")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     if openBackpack == "1" or openBackpack == "2" or \
-    #     openBackpack == "3" or openBackpack == "4" or openBackpack == "5":
-    #         backpackChoice = OptionsScripts.backpack(openBackpack)
-    #         print(backpackChoice)
+    #     backpackfunction1and2
 #     if menuChoice == 3:
 #         #something here
 
@@ -165,27 +125,7 @@ puzzle1()
 #     if menuChoice == 1:
 #         #something here
 #     if menuChoice == 2:
-    #     backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
-    #  "3. Map of Library", "4. Beginner's Guide to Wand Motions", \
-    #  "5. Phone", "6. Post-It Note"]
-    #     print("\n")
-    #     for item in backpackItems:
-    #         print(item)
-    #     openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     while openBackpack.isnumeric() == False:
-    #         print("\nPlease choose a number\n")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     if openBackpack != "1" or openBackpack != "2" or \
-    #     openBackpack != "3" or openBackpack != "4" or openBackpack != "5" or openBackpack != "6":
-    #         print("Please choose a number between 1 and 6")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     if openBackpack == "1" or openBackpack == "2" or \
-    #     openBackpack == "3" or openBackpack == "4" or openBackpack == "5" or openBackpack == "6":
-    #         backpackChoice = OptionsScripts.backpack(openBackpack)
-    #         print(backpackChoice)
-#     if menuChoice == 3:
+    #     backpackfunction3
 #         #something here
 
 # def cutSceneThree():
@@ -205,28 +145,7 @@ puzzle1()
 #     if menuChoice == 1:
 #         #something here
 #     if menuChoice == 2:
-    #     backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
-    #  "3. Map of Library", "4. Beginner's Guide to Wand Motions", "5. Phone" \
-    #  "6. Post-It Note", "7. UV Blacklight Flashlight"]
-    #     print("\n")
-    #     for item in backpackItems:
-    #         print(item)
-    #     openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     while openBackpack.isnumeric() == False:
-    #         print("\nPlease choose a number\n")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     backpackChoice = OptionsScripts.backpack(openBackpack)
-    #     if openBackpack != "1" or openBackpack != "2" or \
-    #     openBackpack != "3" or openBackpack != "4" or \
-    #     openBackpack != "5" or openBackpack != "6" or openBackpack != "7":
-    #         print("Please choose a number between 1 and 7")
-    #         openBackpack = input("\nWhat backpack item do you want?\n")
-    #     if openBackpack == "1" or openBackpack == "2" or \
-    #     openBackpack == "3" or openBackpack == "4" or openBackpack == "5"\
-    #      or openBackpack == "6" or openBackpack == "6":
-    #         backpackChoice = OptionsScripts.backpack(openBackpack)
-    #         print(backpackChoice)
+    #     backpackfunction4
 #     if menuChoice == 3:
 #         #something here
 
