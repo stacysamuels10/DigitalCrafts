@@ -83,6 +83,7 @@ def backpack1 ():
         2. Lumos
         3. Leviosa
     """)
+            sleep(5)
         if openBackpack == "7":
             print("""
         You see the book suddenly light up with stars next to 5 buildings
@@ -93,7 +94,7 @@ def backpack1 ():
         eeYlops owl emporium
         the leAky cauldron
         """)
-
+            sleep(5)
 def backpack2 ():
     openBackpack = ""
     backpackChoice = ""
