@@ -53,20 +53,20 @@ def puzzle1 ():
     success = False
     whatNext = OptionsScripts.invokeMenuOptions()
     menuChoice = OptionsScripts.menuOptions(whatNext)
-    # if menuChoice == 1:
-    #     print("""
-    # You walk up to the locked cabinet.
-    # It has a number 1-9 keypad and 4 blanks
-    # Maybe things in your backpack can be pieced together?        
-    #     """)
-    #     sleep(2)
-    #     puzzle1Code = int(input("Enter the code: "))
-    #     while puzzle1Code.isnumeric() == False:
-    #         print("\nPlease choose a number\n")
-    #         puzzle1Code = int(input("Enter the code: "))
-    #     while puzzle1Code != 1300:
-    #         print("That is not the code. Please try again. The spell power increases with each incorrect guess")
-    #         # increase spell counter
+    if menuChoice == 1:
+        print("""
+    You walk up to the locked cabinet.
+    It has a number 1-9 keypad and 4 blanks
+    Maybe things in your backpack can be pieced together?        
+        """)
+        sleep(2)
+        puzzle1Code = int(input("Enter the code: "))
+        while puzzle1Code.isnumeric() == False:
+            print("\nPlease choose a number\n")
+            puzzle1Code = int(input("Enter the code: "))
+        while puzzle1Code != 1300:
+            print("That is not the code. Please try again. The spell power increases with each incorrect guess")
+            # increase spell counter
     if menuChoice == 2:
         backpackItems = ["1. Your wand", "2. Hogwarts Student Handbook",\
      "3. Map of Library", "4. Beginner's Guide to Wand Motions", "5. Phone"]
@@ -85,8 +85,8 @@ def puzzle1 ():
             print("\nPlease choose a number\n")
             openBackpack = input("\nWhat backpack item do you want?\n")
         backpackChoice = OptionsScripts.backpack(openBackpack)
-        while openBackpack != "1" or openBackpack != "2" or openBackpack != "3" or openBackpack != "4" or openBackpack != "5":
-            print(openBackpack)
+        while openBackpack != "1" and openBackpack != "2" \
+        and openBackpack != "3" and openBackpack != "4" and openBackpack != "5":
             print("Please choose a number between 1 and 5")
             openBackpack = input("\nWhat backpack item do you want?\n")
         backpackChoice = OptionsScripts.backpack(openBackpack)
