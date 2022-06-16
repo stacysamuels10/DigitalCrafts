@@ -45,15 +45,14 @@ def puzzle1(completedPuzzles, incorrectGuesses):
             print("That is not the code. Please try again.\
         The spell power increases with each incorrect guess\n \
         It should be a 4 digit number")
-            incorrectGuess += 1
-            return incorrectGuess
+            incorrectGuesses += 1
         if puzzle1Code == "1300":
             print("""Success! Cabinet cracks open and 
             you hear a soft rumble through the floor, 
             that must be the spell easing up
             """)
             completedPuzzles.append(1)
-            return incorrectGuess
+            incorrectGuesses +=0
             break
             if tryTheCode == "2":
                 break

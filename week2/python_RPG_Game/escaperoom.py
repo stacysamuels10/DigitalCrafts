@@ -1,3 +1,4 @@
+import OptionsScripts
 class EscapeRoom:
     def __init__(self, name, spellStrength, completedPuzzles, incorrectGuesses):
         self.name = name
@@ -5,7 +6,6 @@ class EscapeRoom:
         self.completedPuzzles = completedPuzzles
         self.incorrectGuesses = incorrectGuesses
 
-user = EscapeRoom("", 100, [], 0)
 
 
 def mainMenu ():
@@ -18,16 +18,18 @@ def mainMenu ():
     choice = input("Which number do you want?")
     return choice
 
+user = EscapeRoom("", 100, [], 0)
+
 def gameLoop ():
     # introLetter()
     # introToGame()
     while True:
         choice = mainMenu()
         while len(user.completedPuzzles) == 0:
-            if choice == "1":  
+            if choice == "1":
+                OptionsScripts.puzzle1(user.completedPuzzles, user.incorrectGuesses)  
                 print("story 1 is gonna run yaaaaaay")
-
-                user.completedPuzzles = [1]
+                # user.completedPuzzles = [1]
             if choice == "2":
                 print("this is where we check the backpack")
             if choice == "3":
