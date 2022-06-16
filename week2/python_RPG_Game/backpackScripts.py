@@ -23,20 +23,25 @@ def backpack1 ():
         Your wand from Ollivander's is so cool
         You just don't know how to use it yet.
             """)
+            sleep(5)
         if openBackpack == "2":
             print("""
+        Student Handbook reads:
         1 Galleon equals 17 Sickles
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
+            sleep(5)
         if openBackpack == "3":
             print("""
+        Sections of Library:
         200: Religion
         300: Social Science
         400: Literature and Poetry
         600: Technology
         900: History and Geography
             """)
+            sleep(5)
         if openBackpack == "4":
             print("""
         A Beginner's Guide to Wand Motions
@@ -48,9 +53,10 @@ def backpack1 ():
         Nox: Sharp movement down
         Stupefy: Move your wand diagonally then to the right
             """)
+            sleep(5)
         if openBackpack == "5":
             print("""
-    Phone unlocked and shows a text exchange
+        Phone unlocked and shows a text exchange
 
         Shannon: Do you know where the books are that we need for the first class?
 
@@ -70,6 +76,7 @@ def backpack1 ():
 
         Shannon: Thanks!
         """)
+            sleep(5)
         if openBackpack == "6":
             print("""
         1. Stupefy
@@ -114,12 +121,14 @@ def backpack2 ():
             """)
         if openBackpack == "2":
             print("""
+        Student Handbook reads:
         1 Galleon equals 17 Sickles
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
         if openBackpack == "3":
             print("""
+        Sections of Library:
         200: Religion
         300: Social Science
         400: Literature and Poetry
@@ -139,7 +148,7 @@ def backpack2 ():
             """)
         if openBackpack == "5":
             print("""
-    Phone unlocked and shows a text exchange
+        Phone unlocked and shows a text exchange
 
         Shannon: Do you know where the books are that we need for the first class?
 
@@ -204,12 +213,14 @@ def backpack3 ():
             """)
         if openBackpack == "2":
             print("""
+        Student Handbook reads:
         1 Galleon equals 17 Sickles
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
         if openBackpack == "3":
             print("""
+        Sections of Library:
         200: Religion
         300: Social Science
         400: Literature and Poetry
@@ -229,7 +240,7 @@ def backpack3 ():
             """)
         if openBackpack == "5":
             print("""
-    Phone unlocked and shows a text exchange
+        Phone unlocked and shows a text exchange
 
         Shannon: Do you know where the books are that we need for the first class?
 
@@ -296,12 +307,14 @@ def backpack4 ():
             """)
         if openBackpack == "2":
             print("""
+        Student Handbook reads:
         1 Galleon equals 17 Sickles
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
         if openBackpack == "3":
             print("""
+        Sections of Library:
         200: Religion
         300: Social Science
         400: Literature and Poetry
@@ -321,7 +334,7 @@ def backpack4 ():
             """)
         if openBackpack == "5":
             print("""
-    Phone unlocked and shows a text exchange
+        Phone unlocked and shows a text exchange
 
         Shannon: Do you know where the books are that we need for the first class?
 

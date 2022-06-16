@@ -38,7 +38,6 @@ def puzzle1(completedPuzzles, spellStrength):
 def puzzle2(completedPuzzles, spellStrength):
     puzzle2Code = ""
     tryTheCode2 = ""
-    #sleep(2)
     print("""
         You walk to the cabinet and open it up
         You see an intricate unbalanced scale and 
@@ -110,7 +109,7 @@ def puzzle3(completedPuzzles, spellStrength):
             The lock opens and the ground rumbles. 
             Getting closer! 
             You can check your current spell level by trying the door.
-            
+
             You glance at the clock and 
             see you still have time until Potions starts
             Inside the desk you see a UV Flashlight.

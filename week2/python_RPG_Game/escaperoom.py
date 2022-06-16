@@ -1,5 +1,7 @@
 import OptionsScripts
 import backpackScripts
+from time import sleep
+import random
 
 class EscapeRoom:
     def __init__(self, name, spellStrength, completedPuzzles):
@@ -21,54 +23,65 @@ def mainMenu ():
 
 user = EscapeRoom("", 100, 0)
 
+def introLetter(): #tested and works
+    name = input("""
+    Hello wizard! Please enter your name!
+    \n""")
+    sleep(1)
+    print("\n")
+    print(f"""
+    Welcome to Hogwarts School of Witchcraft 
+    and Wizardry {name}, it is time for you 
+    to be sorted into your house\n""")
+    sleep(4)
+    hogwartsHouses = ["Gryffindor", "HufflePuff", "Ravenclaw", "Slytherin"]
+    userHouse = random.choice(hogwartsHouses)
+    user.name = name + " of House " + userHouse
+    print(f"You have been sorted into....\n")
+    sleep(2.8)
+    print(f"{userHouse}!!")
+    sleep(2.2)
+    print("\n")
+    print(f"Henceforth, you will be known as {user.name}")
+    print("\n===========================================================\n")
+    sleep(3.2)
+def introToGame(): #tested and works
+    print(f"\n{user.name}, you've accepted your invitation to Hogwarts and finally attend as a student.")
+    print("\n===========================================================\n")
+    sleep(5)
+    print("""
+    It's your first week and after
+    staying up late in a new friends dorm,
+    you realize they have played a prank on you
+    and enchanted the room so you can't get out.""")
+    print("\n===========================================================\n")
+    sleep(9)
+    print("""
+    You have your backpack but
+    the rest of the room is new and different.
+    You look at your watch. You have an hour before
+    your first class of Potions. """)
+    print("\n===========================================================\n")
+    sleep(9)
+    print("""
+    You look around the room and
+    see a bookshelf with a map of the library
+    and a brochure titled 'A Beginner's Guide to Wand Motions'
+    You shove both things in your backpack hoping
+    they might help you later.
+    """)
+    print("\n===========================================================\n")
+    sleep(10.4)
+    print("""
+    You might want to a grab a pen and paper 
+    or to open up notes on your computer to help
+    you solve the puzzles!
+    """)
+    print("\n===========================================================\n")
+    sleep(9)
 def gameLoop ():
-    def introLetter(): #tested and works
-        name = input("Hello wizard! Please enter your name!\n")
-        #sleep(1)
-        print(f"""Welcome to Hogwarts School of Witchcraft 
-        and Wizardry {name}, it is time for you 
-        to be sorted into your house""")
-        #sleep(2)
-        hogwartsHouses = ["Gryffindor", "HufflePull", "Ravenclaw", "Slytherin"]
-        userHouse = random.choice(hogwartsHouses)
-        name = name + " of House " + userHouse
-        print(f"You have been sorted into....")
-        #sleep(1.7)
-        print(f"{userHouse}!!")
-        #sleep(.7)
-        print(f"Hence forward you will be known as {name}")
-        return name
-    def introToGame(): #tested and works
-        print("\nYou’ve accepted your invitation to Hogwarts and finally attend as a student.")
-        print("\n===========================================================\n")
-        #sleep(2.4)
-        print("It's your first week and after ")
-        print("staying up late in a new friends dorm, ")
-        print("you realize they have played a prank on you ")
-        print("and enchanted the room so you can't get out.")
-        #sleep(.7)
-        print("\n===========================================================\n")
-        #sleep(2.7)
-        print("""You have your backpack but
-        the rest of the room is new and different.
-        You look at your watch.You have an hour before
-        your first class of Potions. """)
-        #sleep(1.2)
-        print("\n===========================================================\n")
-        print("""
-        You look around the room and
-        see a bookshelf with a map of the library
-        and a brochure title 'A Beginner's Guide to Wand Motions'
-        You shove both things in your backpack hoping
-        they might help you later.
-        """)
-        print("\n===========================================================\n")
-        print("""
-        You might want to a grab a pen and paper 
-        or to open up notes on your computer to help
-        you solve the puzzles!
-        """)
-        print("\n===========================================================\n")
+    introLetter()
+    introToGame()
     while True:
         choice = mainMenu()
         while user.completedPuzzles == 0:
@@ -183,11 +196,11 @@ else:
     Better luck next time. """)
 
 
-playAgain = ""
-playAgain = input("want to play again? Y/N")
-while True:
-    if playAgain.lower() == "y":
-        gameLoop()
-    if playAgain.lower() == "n":
-        print("Okay thanks for playing!")
-        break
+# playAgain = ""
+# playAgain = input("want to play again? Y/N")
+# while True:
+#     if playAgain.lower() == "y":
+#         gameLoop()
+#     if playAgain.lower() == "n":
+#         print("Okay thanks for playing!")
+#         break
