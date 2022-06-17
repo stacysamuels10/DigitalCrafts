@@ -117,8 +117,8 @@ def puzzle3(completedPuzzles, spellStrength):
     tryTheCode3 = ""
     print("""
         The lock on the desk has arrows in four directions
-         and a picture of a hand and wand. 
-         You recognize it as a directional lock
+        and a picture of a hand and wand. 
+        You recognize it as a directional lock
         that only moves up, down, left, and right.
         
         Maybe you have something in your backpack 
@@ -139,7 +139,7 @@ def puzzle3(completedPuzzles, spellStrength):
             Getting closer! 
             You can check your current spell level by trying the door.
 
-            You glance at the clock and 
+            You glance at your watch and 
             see you still have time until Potions starts
             Inside the desk you see a UV Flashlight.
             You stuff in your backpack and turn to notice an old book

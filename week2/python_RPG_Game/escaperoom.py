@@ -52,7 +52,7 @@ def introToGame(): #tested and works
     print("""
     It's your first week and after
     staying overnight in a new friends dorm,
-    you wakeup and realize they have played a prank on you
+    you wake up and realize they have played a prank on you
     and enchanted the room so you can't get out.""")
     print("\n===========================================================\n")
     sleep(9)
@@ -95,7 +95,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength += 10
+                    user.spellStrength += 5
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack1()
@@ -109,8 +109,9 @@ def gameLoop ():
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
+                user.completedPuzzles = 4
                 break
-        choice = mainMenu()
+            choice = mainMenu()
         while user.completedPuzzles == 1:
             if choice == "1":  
                 outcomePuzzle2 = OptionsScripts.puzzle2(user.completedPuzzles, user.spellStrength)   
@@ -119,7 +120,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=10
+                    user.spellStrength+=5
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack2()
@@ -133,8 +134,9 @@ def gameLoop ():
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
+                user.completedPuzzles = 4
                 break
-        choice = mainMenu()
+            choice = mainMenu()
         while user.completedPuzzles == 2:
             if choice == "1":  
                 outcomePuzzle3 = OptionsScripts.puzzle3(user.completedPuzzles, user.spellStrength)   
@@ -143,7 +145,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=10
+                    user.spellStrength+=5
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack3()
@@ -157,9 +159,10 @@ def gameLoop ():
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
+                user.completedPuzzles = 4
                 break
 # WINNER CASE -- modify to number of puzzles you want
-        choice = mainMenu()
+            choice = mainMenu()
         while user.completedPuzzles == 3:
             if choice == "1":  
                 outcomePuzzle4 = OptionsScripts.puzzle4(user.completedPuzzles, user.spellStrength)   
@@ -168,7 +171,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=10
+                    user.spellStrength+=5
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack4()
@@ -182,32 +185,31 @@ def gameLoop ():
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
-                break
+                user.completedPuzzles = 4
         if user.completedPuzzles == 4:
             break
 
-gameLoop()
-if user.spellStrength <= 0:
-    print("""
-    The ground below you rumbles a final time 
-    and you switch the light back on to see the door open. 
-    You grab your backpack and run out to get to Potions just in time!
-
-    Congratulations!
-    """)
-else:
-    print("""
-    You had too many guesses and the spell strength is too high. 
-    You could not get out, and Ms. McGonagall had to come and get you. 
-    You missed your first day of Potions. 
-    Better luck next time. """)
 
 
-# playAgain = ""
-# playAgain = input("want to play again? Y/N")
-# while True:
-#     if playAgain.lower() == "y":
-#         gameLoop()
-#     if playAgain.lower() == "n":
-#         print("Okay thanks for playing!")
-#         break
+playAgain = "y"
+while True:
+    if playAgain.lower() == "y":
+        gameLoop()
+        if user.spellStrength <= 0:
+            print("""
+            The ground below you rumbles a final time 
+            and you switch the light back on to see the door open. 
+            You grab your backpack and run out to get to Potions just in time!
+
+            Congratulations!
+            """)
+        else:
+            print("""
+            The spell strength is too high. 
+            You could not get out, and Ms. McGonagall had to come and get you. 
+            You missed your first day of Potions. 
+            Better luck next time. """)
+        playAgain = input("want to play again? Y/N")
+    if playAgain.lower() == "n":
+        print("Okay thanks for playing!")
+        break
