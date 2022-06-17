@@ -107,9 +107,9 @@ def gameLoop ():
                 Continue to complete the puzzles to lower the strength""")
                 sleep(5)
                 choice = mainMenu()
-        if choice == "4":
-            print("Thank you for playing. Bye!")
-            break
+            if choice == "4":
+                print("Thank you for playing. Bye!")
+                break
         choice = mainMenu()
         while user.completedPuzzles == 1:
             if choice == "1":  
