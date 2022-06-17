@@ -51,8 +51,8 @@ def introToGame(): #tested and works
     sleep(5)
     print("""
     It's your first week and after
-    staying up late in a new friends dorm,
-    you realize they have played a prank on you
+    staying overnight in a new friends dorm,
+    you wakeup and realize they have played a prank on you
     and enchanted the room so you can't get out.""")
     print("\n===========================================================\n")
     sleep(9)
@@ -76,9 +76,12 @@ def introToGame(): #tested and works
     You might want to a grab a pen and paper 
     or to open up notes on your computer to help
     you solve the puzzles!
+
+    It will help if you maximize your terminal
+    to be able to view puzzles and clues at the same time
     """)
     print("\n===========================================================\n")
-    sleep(9)
+    sleep(7)
 def gameLoop ():
     introLetter()
     introToGame()
@@ -102,6 +105,7 @@ def gameLoop ():
                 The door is still locked. 
                 The spell is at power: {user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
+                sleep(5)
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
@@ -125,6 +129,7 @@ def gameLoop ():
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
+                sleep(5)
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
@@ -148,6 +153,7 @@ def gameLoop ():
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
+                sleep(5)
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
@@ -172,12 +178,13 @@ def gameLoop ():
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
+                sleep(5)
                 choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 break
+        if user.completedPuzzles == 4:
             break
-        break
 
 gameLoop()
 if user.spellStrength <= 0:

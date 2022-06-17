@@ -8,6 +8,31 @@ def puzzle1(completedPuzzles, spellStrength):
         You walk up to the locked cabinet.
         It has a number 1-9 keypad and 4 blanks
         It says Library below it.
+
+        You see a phone and unlock it.
+        You notice the following conversation.""")
+    sleep(5)
+    print("""
+        Phone unlocked and shows a text exchange
+
+        Shannon: Do you know where the books are that we need for the first class?
+
+        Jill: What books?
+
+        Shannon: I need to find them in the library before everyone else checks them out
+
+        Jill: Okay, I am in the library now, but what books??
+
+        Shannon: Sizzling Scales: A Collection of Daring Dragon Poetry and Magical Maps and the Art of Not Getting Lost
+
+        Jill: That's all?
+
+        Shannon:  Yep- Sizzling Scales and Magical Maps.
+
+        Jill: Dragon Rhymes and maps.  Off to the shelves to find them for us. 
+
+        Shannon: Thanks!
+
         Maybe things in your backpack can be pieced together?        
             """)
     sleep(4)
@@ -20,9 +45,7 @@ def puzzle1(completedPuzzles, spellStrength):
         Success! Cabinet cracks open and 
         you hear a soft rumble through the floor, 
         that must be the spell easing up.
-        You notice a phone next to the cabinet and
-        place it in your backpack too. Maybe it 
-        has some info on it to help you end the spell.
+        You place the phone in your backpack
         
         You can check your current spell level by trying the door
         """)
@@ -46,10 +69,11 @@ def puzzle2(completedPuzzles, spellStrength):
         You vaguely remember something about the weird 
         currency in your student handbook.
         The scale has 2 Galleons and 2 Sickles in a tray. 
-        
+        """)
+    sleep(9.5)
+    print("""
         How many Knuts should you place on the other tray to balance the scales?
             """)
-    sleep(9)
     tryTheCode2 = input("Would you like to 1. Enter the number of coins to solve the puzzle or 2. View the menu? ")
     if tryTheCode2 == "1":
         puzzle2Code = input("Enter the number: ")
@@ -66,7 +90,7 @@ def puzzle2(completedPuzzles, spellStrength):
             You walk through to a study room
         """)
             print("\n===========================================================\n")
-            sleep(8)
+            sleep(9.5)
             print("""
             You explore the room but only find 
             locked doors, a light switch, and 
@@ -78,14 +102,14 @@ def puzzle2(completedPuzzles, spellStrength):
             You put the post it note in your backpack in case you need it for later
             """)
             print("\n===========================================================\n")
-            sleep(8)
+            sleep(9.5)
             return True
         print("""
         That is not the correct amount. Please try again.
         The spell power increases with each incorrect guess
         It should be a 4 digit number
         """)
-        sleep(4)
+        sleep(4.4)
         return False
 
 def puzzle3(completedPuzzles, spellStrength):
@@ -101,13 +125,14 @@ def puzzle3(completedPuzzles, spellStrength):
         that can hold a clue to how to open this lock?
 
     \n===========================================================\n
-    
+    """)
+    sleep(10)
+    print("""
     Which 3 directions should you move the lock?
             """)
-    sleep(9)
     tryTheCode3 = input("Would you like to 1. Enter the directions of arrows to solve the puzzle or 2. View the menu? ")
     if tryTheCode3 == "1":
-        puzzle3Code = input("Enter the number: ")
+        puzzle3Code = input("Enter the 3 directions: ")
         if puzzle3Code.lower() == "right, up, down" or puzzle3Code.lower() == "right up down":
             print(f"""
             The lock opens and the ground rumbles. 
@@ -120,13 +145,13 @@ def puzzle3(completedPuzzles, spellStrength):
             You stuff in your backpack and turn to notice an old book
         """)
             print("\n===========================================================\n")
-            sleep(8)
+            sleep(9.4)
             print("""
             You open the book and see a map of Diagon Alley. 
             There is writing scrawled in the margins.
             """)
             print("\n===========================================================\n")
-            sleep(3)
+            sleep(6.4)
             print("""
         “What you see in the daytime, is hidden in the night”
         “To turn on the answer you must turn out the light”
@@ -134,7 +159,7 @@ def puzzle3(completedPuzzles, spellStrength):
         “You start from top to bottom…. hurry, or you’ll be late’ 
             """)
             print("\n===========================================================\n")
-            sleep(9)
+            sleep(10.5)
             return True
         print("""
         That is not the correct amount. Please try again.
@@ -152,17 +177,21 @@ def puzzle4(completedPuzzles, spellStrength):
         is there something in your backpack to help you see the book?
 
     \n===========================================================\n
-    
+    """)
+    sleep(8.3)
+    print("""
     What is the spell to say to unlock the door?
             """)
     tryTheCode4 = input("Would you like to 1. Enter the spell or 2. View the menu? ")
     if tryTheCode4 == "1":
         puzzle4Code = input("Enter the spell(all 5 letters together, no spaces): ")
         if puzzle4Code.lower() == "gotya":
+            sleep(2)
             return True
         print("""
         That is not the correct amount. Please try again.
         The spell power increases with each incorrect guess
-        It should be a 4 digit number
+        It should be 5 letters.
         """)
+        sleep(3.3)
         return False
