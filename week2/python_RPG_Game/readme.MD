@@ -15,4 +15,4 @@ In your first week of school, you spend the night in a new friend's dorm and wak
 # Read More
 
 I wrote more about the process of making `Escape Room: Hogwarts Edition` on Medium.
-You can read it here.
+You can read it here
