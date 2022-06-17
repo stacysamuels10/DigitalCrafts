@@ -95,7 +95,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength += 5
+                    user.spellStrength += 1
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack1()
@@ -120,7 +120,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=5
+                    user.spellStrength+=1
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack2()
@@ -145,7 +145,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=5
+                    user.spellStrength+=1
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack3()
@@ -171,7 +171,7 @@ def gameLoop ():
                     user.completedPuzzles += 1
                     break
                 else:
-                    user.spellStrength+=5
+                    user.spellStrength+=1
                 choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack4()
