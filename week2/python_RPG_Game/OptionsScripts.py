@@ -4,13 +4,13 @@ from time import sleep
 def puzzle1(completedPuzzles, spellStrength):
     puzzle1Code = ""
     tryTheCode = ""
-    #sleep(2)
     print("""
         You walk up to the locked cabinet.
         It has a number 1-9 keypad and 4 blanks
         It says Library below it.
         Maybe things in your backpack can be pieced together?        
             """)
+    sleep(4)
     tryTheCode = input("Would you like to 1. Enter the code to solve the puzzle or 2. View the menu? ")
     if tryTheCode == "1":
         puzzle1Code = input("Enter the code: ")
@@ -26,13 +26,14 @@ def puzzle1(completedPuzzles, spellStrength):
         
         You can check your current spell level by trying the door
         """)
+            sleep(8)
             
             return True
         print("""
         That is not the code. Please try again.
         The spell power increases with each incorrect guess
         It should be a 4 digit number\n""")
-        
+        sleep(4)
         return False
 
 def puzzle2(completedPuzzles, spellStrength):

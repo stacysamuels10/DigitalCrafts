@@ -1,3 +1,4 @@
+from time import sleep
 def backpack1 ():
     openBackpack = ""
     backpackChoice = ""
@@ -23,7 +24,7 @@ def backpack1 ():
         Your wand from Ollivander's is so cool
         You just don't know how to use it yet.
             """)
-            sleep(5)
+            sleep(3)
         if openBackpack == "2":
             print("""
         Student Handbook reads:
@@ -53,7 +54,7 @@ def backpack1 ():
         Nox: Sharp movement down
         Stupefy: Move your wand diagonally then to the right
             """)
-            sleep(5)
+            sleep(8)
         if openBackpack == "5":
             print("""
         Phone unlocked and shows a text exchange
@@ -76,14 +77,14 @@ def backpack1 ():
 
         Shannon: Thanks!
         """)
-            sleep(5)
+            sleep(10)
         if openBackpack == "6":
             print("""
         1. Stupefy
         2. Lumos
         3. Leviosa
     """)
-            sleep(5)
+            sleep(3)
         if openBackpack == "7":
             print("""
         You see the book suddenly light up with stars next to 5 buildings
@@ -94,7 +95,7 @@ def backpack1 ():
         eeYlops owl emporium
         the leAky cauldron
         """)
-            sleep(5)
+            sleep(7)
 def backpack2 ():
     openBackpack = ""
     backpackChoice = ""
@@ -120,6 +121,7 @@ def backpack2 ():
         Your wand from Ollivander's is so cool
         You just don't know how to use it yet.
             """)
+            sleep(3)
         if openBackpack == "2":
             print("""
         Student Handbook reads:
@@ -127,6 +129,7 @@ def backpack2 ():
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
+            sleep(5)
         if openBackpack == "3":
             print("""
         Sections of Library:
@@ -136,6 +139,7 @@ def backpack2 ():
         600: Technology
         900: History and Geography
             """)
+            sleep(5)
         if openBackpack == "4":
             print("""
         A Beginner's Guide to Wand Motions
@@ -147,6 +151,7 @@ def backpack2 ():
         Nox: Sharp movement down
         Stupefy: Move your wand diagonally then to the right
             """)
+            sleep(8)
         if openBackpack == "5":
             print("""
         Phone unlocked and shows a text exchange
@@ -169,12 +174,14 @@ def backpack2 ():
 
         Shannon: Thanks!
         """)
+            sleep(10)
         if openBackpack == "6":
             print("""
         1. Stupefy
         2. Lumos
         3. Leviosa
-    """)
+        """)
+            sleep(3)
         if openBackpack == "7":
             print("""
         You see the book suddenly light up with stars next to 5 buildings
@@ -185,7 +192,7 @@ def backpack2 ():
         eeYlops owl emporium
         the leAky cauldron
         """)
-
+            sleep(7)
 def backpack3 ():
     openBackpack = ""
     backpackChoice = ""
@@ -212,6 +219,7 @@ def backpack3 ():
         Your wand from Ollivander's is so cool
         You just don't know how to use it yet.
             """)
+            sleep(3)
         if openBackpack == "2":
             print("""
         Student Handbook reads:
@@ -219,6 +227,7 @@ def backpack3 ():
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
+            sleep(5)
         if openBackpack == "3":
             print("""
         Sections of Library:
@@ -228,6 +237,7 @@ def backpack3 ():
         600: Technology
         900: History and Geography
             """)
+            sleep(5)
         if openBackpack == "4":
             print("""
         A Beginner's Guide to Wand Motions
@@ -239,6 +249,7 @@ def backpack3 ():
         Nox: Sharp movement down
         Stupefy: Move your wand diagonally then to the right
             """)
+            sleep(8)
         if openBackpack == "5":
             print("""
         Phone unlocked and shows a text exchange
@@ -261,12 +272,14 @@ def backpack3 ():
 
         Shannon: Thanks!
         """)
+            sleep(10)
         if openBackpack == "6":
             print("""
         1. Stupefy
         2. Lumos
         3. Leviosa
     """)
+            sleep(3)
         if openBackpack == "7":
             print("""
         You see the book suddenly light up with stars next to 5 buildings
@@ -277,7 +290,7 @@ def backpack3 ():
         eeYlops owl emporium
         the leAky cauldron
         """)
-
+            sleep(7)
 def backpack4 ():
     openBackpack = ""
     backpackChoice = ""
@@ -306,6 +319,7 @@ def backpack4 ():
         Your wand from Ollivander's is so cool
         You just don't know how to use it yet.
             """)
+            sleep(3)
         if openBackpack == "2":
             print("""
         Student Handbook reads:
@@ -313,6 +327,7 @@ def backpack4 ():
         1 Galleon equals 493 Knuts
         1 Sickle equals 29 Knuts
             """)
+            sleep(5)
         if openBackpack == "3":
             print("""
         Sections of Library:
@@ -322,6 +337,7 @@ def backpack4 ():
         600: Technology
         900: History and Geography
             """)
+            sleep(5)
         if openBackpack == "4":
             print("""
         A Beginner's Guide to Wand Motions
@@ -333,6 +349,7 @@ def backpack4 ():
         Nox: Sharp movement down
         Stupefy: Move your wand diagonally then to the right
             """)
+            sleep(8)
         if openBackpack == "5":
             print("""
         Phone unlocked and shows a text exchange
@@ -355,12 +372,14 @@ def backpack4 ():
 
         Shannon: Thanks!
         """)
+            sleep(10)
         if openBackpack == "6":
             print("""
         1. Stupefy
         2. Lumos
         3. Leviosa
     """)
+            sleep(3)
         if openBackpack == "7":
             print("""
         You see the book suddenly light up with stars next to 5 buildings
@@ -371,3 +390,4 @@ def backpack4 ():
         eeYlops owl emporium
         the leAky cauldron
         """)
+            sleep(7)
