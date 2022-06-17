@@ -96,17 +96,14 @@ def gameLoop ():
                     break
                 else:
                     user.spellStrength += 1
-                choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack1()
-                choice = mainMenu()
             if choice == "3":
                 print(f"""
                 The door is still locked. 
                 The spell is at power: {user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
                 sleep(5)
-                choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 user.completedPuzzles = 4
@@ -121,17 +118,14 @@ def gameLoop ():
                     break
                 else:
                     user.spellStrength+=1
-                choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack2()
-                choice = mainMenu()
             if choice == "3":
                 print(f"""
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
                 sleep(5)
-                choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 user.completedPuzzles = 4
@@ -146,17 +140,14 @@ def gameLoop ():
                     break
                 else:
                     user.spellStrength+=1
-                choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack3()
-                choice = mainMenu()
             if choice == "3":
                 print(f"""
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
                 sleep(5)
-                choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 user.completedPuzzles = 4
@@ -172,20 +163,18 @@ def gameLoop ():
                     break
                 else:
                     user.spellStrength+=1
-                choice = mainMenu()
             if choice == "2":
                 backpackScripts.backpack4()
-                choice = mainMenu()
             if choice == "3":
                 print(f"""
                 The door is still locked. 
                 The spell is at power:{user.spellStrength}
                 Continue to complete the puzzles to lower the strength""")
                 sleep(5)
-                choice = mainMenu()
             if choice == "4":
                 print("Thank you for playing. Bye!")
                 user.completedPuzzles = 4
+            choice = mainMenu()
         if user.completedPuzzles == 4:
             break
 
