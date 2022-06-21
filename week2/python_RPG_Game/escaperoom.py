@@ -83,8 +83,8 @@ def introToGame(): #tested and works
     print("\n===========================================================\n")
     sleep(7)
 def gameLoop ():
-    introLetter()
-    introToGame()
+    #introLetter()
+    #introToGame()
     while True:
         choice = mainMenu()
         while user.completedPuzzles == 0:
@@ -94,7 +94,7 @@ def gameLoop ():
                     user.spellStrength -= 30
                     user.completedPuzzles += 1
                     break
-                else:
+                if outcomePuzzle1 != True:
                     user.spellStrength += 1
             if choice == "2":
                 backpackScripts.backpack1()
@@ -175,26 +175,26 @@ def gameLoop ():
             break
 
 
+gameLoop()
+# playAgain = "y"
+# while True:
+#     if playAgain.lower() == "y":
+#         gameLoop()
+#         if user.spellStrength <= 0:
+#             print("""
+#             The ground below you rumbles a final time 
+#             and you switch the light back on to see the door open. 
+#             You grab your backpack and run out to get to Potions just in time!
 
-playAgain = "y"
-while True:
-    if playAgain.lower() == "y":
-        gameLoop()
-        if user.spellStrength <= 0:
-            print("""
-            The ground below you rumbles a final time 
-            and you switch the light back on to see the door open. 
-            You grab your backpack and run out to get to Potions just in time!
-
-            Congratulations!
-            """)
-        else:
-            print("""
-            The spell strength is too high. 
-            You could not get out, and Ms. McGonagall had to come and get you. 
-            You missed your first day of Potions. 
-            Better luck next time. """)
-        playAgain = input("want to play again? Y/N")
-    if playAgain.lower() == "n":
-        print("Okay thanks for playing!")
-        break
+#             Congratulations!
+#             """)
+#         else:
+#             print("""
+#             The spell strength is too high. 
+#             You could not get out, and Ms. McGonagall had to come and get you. 
+#             You missed your first day of Potions. 
+#             Better luck next time. """)
+#         playAgain = input("want to play again? Y/N")
+#     if playAgain.lower() == "n":
+#         print("Okay thanks for playing!")
+#         break
