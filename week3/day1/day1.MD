@@ -42,3 +42,5 @@ manipulating the DOM to be able to interact with Objects
 unsplash.com is a great site for high res images, image tags need source
 
 depricated means they are no longer updated
+
+responsive web design, deeper concepts of CSS and HTML that is good and modern for websites, mobile first for mobile device designs
