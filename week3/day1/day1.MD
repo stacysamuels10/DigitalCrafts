@@ -38,3 +38,5 @@ manipulating the DOM to be able to interact with Objects
 
 - most have opening and closing tags ` <p></p>`
 - some are self closing tags. example `<input />`
+
+unsplash.com is a great site for high res images, image tags need source
