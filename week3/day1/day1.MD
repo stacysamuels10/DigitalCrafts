@@ -40,3 +40,5 @@ manipulating the DOM to be able to interact with Objects
 - some are self closing tags. example `<input />`
 
 unsplash.com is a great site for high res images, image tags need source
+
+depricated means they are no longer updated
