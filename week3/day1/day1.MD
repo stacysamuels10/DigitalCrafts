@@ -33,3 +33,8 @@ You wil interact with the a LOT
 - the name was decided very early on when a web was created, it has state the saem ever since
 
 manipulating the DOM to be able to interact with Objects
+
+<html></html> called an element
+
+- most have opening and closing tags ` <p></p>`
+- some are self closing tags. example `<input />`
