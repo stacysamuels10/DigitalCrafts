@@ -9,33 +9,77 @@
       body {
         background-color: black;
         color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Gill Sans", "Trebuchet MS", sans-serif;
       }
       .floatleft {
         float: left;
         margin-right: 5px;
-        background-color: black;
+        background-color: transparent;
+        border: none;
         color: white;
       }
       .floatright {
         float: right;
         margin-right: 5px;
-        background-color: black;
+        background-color: transparent;
+        border: none;
         color: white;
+      }
+      .Google {
+        text-align: center;
+        padding-top: 110px;
+        font-size: 100px;
+        margin-bottom: ;
+      }
+      .search-bar {
+        text-align: center;
+        padding-bottom: 10px;
+        color: white;
+        background-color: transparent;
+      }
+      .aftersearch {
+        background-color: rgb(48, 45, 45);
+        border: none;
+        height: 30px;
+        color: white;
+      }
+      .search-input {
+        width: 300px;
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      .after-search {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <input type="button" class="floatleft" id="top-menu" value="About" />
-    <input type="button" class="floatleft" id="top-menu" value="Store" />
-    <input type="button" class="floatright" id="top-menu" value="Gmail" />
-    <input type="button" class="floatright" id="top-menu" value="Images" />
-    <br />
-    <h1>Google</h1>
-    <p>Gmail</p>
-    <p>Images</p>
-    <button>Google Search</button>
-    <button>I'm Feeling Lucky</button>
-    <p>Take your Privacy Checkup</p>
+    <div class="top-menu">
+      <input type="button" class="floatleft" value="About" alt="About" />
+      <input type="button" class="floatleft" value="Store" alt="Store" />
+      <input type="button" class="floatright" value="Gmail" alt="Gmail" />
+      <input type="button" class="floatright" value="Images" alt="Images" />
+    </div>
+    <div class="Google">
+      <p>Google</p>
+    </div>
+    <div class="search-bar">
+      <input type="search" class="search-input" />
+    </div>
+    <div class="after-search">
+      <input
+        type="button"
+        class="aftersearch"
+        id="after-search"
+        value="Google Search"
+      />
+      <input
+        type="button"
+        class="aftersearch"
+        id="after-search"
+        value="I'm Feeling Lucky"
+      />
+      <p>Take your Privacy Checkup</p>
+    </div>
   </body>
 </html>
