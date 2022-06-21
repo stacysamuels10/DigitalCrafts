@@ -44,3 +44,8 @@ unsplash.com is a great site for high res images, image tags need source
 depricated means they are no longer updated
 
 responsive web design, deeper concepts of CSS and HTML that is good and modern for websites, mobile first for mobile device designs
+
+### do you put style.css in head or body?
+
+It depends. if you want the "pretty" blanks to show up first, in the head
+if you want the content to load before the stlye, put it in the body at the appropriate spot. it depends on what your website and client needs are
