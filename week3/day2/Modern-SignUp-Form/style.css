@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wgth@100;wght@700&display=swap");
+
+body {
+  background-color: #f8f8f8;
+}
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 3em;
   align-items: center;
   height: 100%;
+  border-radius: 3em;
+  background-color: white;
+  box-shadow: 5px 10px #888888;
 }
 .col-left {
   display: flex;
   flex-direction: column;
   width: 60%;
+  padding: 1rem;
 }
 .signup {
   display: flex;
@@ -16,16 +25,16 @@
 }
 .input-container {
   display: flex;
-  border-width: 0 0 1px;
-  border-bottom: 1px, solid, black;
+  padding: 1em;
+  align-items: center;
 }
 .form1 {
   display: flex;
+  border: none;
   font-family: Poppins, sans-serif;
   flex-direction: column;
   align-items: center;
-  border-width: 0 0 1px;
-  border-bottom: 1px, solid, black;
+
   width: 70%;
   padding: 10px;
 }
@@ -50,13 +59,23 @@
   display: flex;
   width: 130px;
   height: 50px;
+  font-size: medium;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 8px;
-  background-color: #6dabe4;
+  background-color: #c5dff6;
   color: white;
   padding: 50px, 80px;
+  transition: all 0.5s;
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: #6dabe4;
+  transition-duration: 0.6s;
+  color: white;
+}
+.submit:active {
 }
 .image {
   display: flex;

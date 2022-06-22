@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link defer rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script
@@ -18,67 +18,79 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="col-left">
-        <div class="signup">
-          <h1>Sign Up</h1>
-        </div>
-        <div class="form-total">
-          <form>
-            <div class="input-container">
-              <i class="fa-solid fa-user"></i>
-              <input
-                class="form1"
-                type="text"
-                id="Your-Name"
-                name="Your-Name"
-                placeholder="Your name"
-              />
-            </div>
-            <input
-              class="form1"
-              type="email"
-              id="Your-Email"
-              name="Your-Email"
-              placeholder="Your Email"
-            />
-            <input
-              class="form1"
-              type="password"
-              id="Password"
-              name="Password"
-              placeholder="Password"
-            />
-            <input
-              class="form1"
-              type="password"
-              id="Repeat-password"
-              name="Repeat-password"
-              placeholder="Repeat your password"
-            />
-            <div class="agree">
-              <div class="check">
-                <input type="checkbox" id="tos" name="tos" />
+    <div class="main">
+      <div class="container">
+        <div class="col-left">
+          <div class="signup">
+            <h1>Sign Up</h1>
+          </div>
+          <div class="form-total">
+            <form>
+              <div class="input-container">
+                <i class="fa-solid fa-user"></i>
+                <input
+                  class="form1"
+                  type="text"
+                  id="Your-Name"
+                  name="Your-Name"
+                  placeholder="Your name"
+                />
               </div>
-              <label for="tos">
-                I agree all statements in <a href="">Terms of service</a></label
-              >
-            </div>
-            <div class="register">
-              <input class="submit" type="button" value="Register" />
-            </div>
-          </form>
+              <div class="input-container">
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                  class="form1"
+                  type="email"
+                  id="Your-Email"
+                  name="Your-Email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  class="form1"
+                  type="password"
+                  id="Password"
+                  name="Password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  class="form1"
+                  type="password"
+                  id="Reppassword"
+                  name="Reppassword"
+                  placeholder="Repeat your password"
+                />
+              </div>
+              <div class="agree">
+                <div class="check">
+                  <input type="checkbox" id="tos" name="tos" />
+                </div>
+                <label for="tos">
+                  I agree all statements in
+                  <a href="">Terms of service</a></label
+                >
+              </div>
+              <div class="register">
+                <input class="submit" type="button" value="Register" />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="col-right">
-        <div class="image">
-          <img
-            src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
-            alt="Home Office Desk"
-          />
-        </div>
-        <div class="member">
-          <a href="">I am already a member</a>
+        <div class="col-right">
+          <div class="image">
+            <img
+              src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
+              alt="Home Office Desk"
+            />
+          </div>
+          <div class="member">
+            <a href="">I am already a member</a>
+          </div>
         </div>
       </div>
     </div>
