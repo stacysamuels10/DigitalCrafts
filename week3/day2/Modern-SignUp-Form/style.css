@@ -76,6 +76,7 @@ body {
   color: white;
 }
 .submit:active {
+  background-color: #c5dff6;
 }
 .image {
   display: flex;
