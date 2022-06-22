@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script type="text/javascript" src="main.js"></script>
     <syle><link rel="stylesheet" href="style.css" /></syle>
   </head>
   <body>
@@ -17,32 +18,13 @@
     </div>
     <div class="flex-container">
       <div class="col-left">
-        <input
-          type="button"
-          onlick="changeImg()"
-          class="nav-bar"
-          id="systems"
-        />
-        <img
-          src="http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
-          alt="Systems and Networks"
-        />
-        <script>
-          function changeImg() {
-            var image = document.getElementById("systems");
-            if (
-              image.src.match(
-                "http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
-              )
-            ) {
-              image.src =
-                "http://taco.com/assets/images/autogen/Systems___and_Networks_Htaco2biga.gif";
-            } else {
-              image.src =
-                "http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif";
-            }
-          }
-        </script>
+        <button class="nav-bar" id="systems">
+          <img
+            onlick="changeImg()"
+            src="http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
+            alt="Systems and Networks"
+          />
+        </button>
         <button class="nav-bar" id="hosting">
           <img
             src="http://taco.com/assets/images/autogen/Web___Hosting_Ntaco2big.gif"
@@ -74,7 +56,19 @@
           />
         </button>
       </div>
-      <div class="col-middle">2</div>
+      <div class="col-middle">
+        <p>
+          Technical Advisors, Inc. can help with all of your computing needs. We
+          can administer and maintain your Unix, Linux, and Windows computing
+          environments, and troubleshoot your networks. Our system
+          administration staff specializes in internetworking and wide area
+          networks. We have helped some of the largest companies in the U.S.
+          with their networking and computing needs. We can help with a wide
+          variety of Unix and Linux systems, and we understand the differences
+          between them. Do you need help evaluating or installing internet
+          access at your home or business? Call us!
+        </p>
+      </div>
     </div>
     <div class="footer">3</div>
   </body>
