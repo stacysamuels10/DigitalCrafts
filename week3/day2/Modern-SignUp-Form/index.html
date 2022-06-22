@@ -9,53 +9,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
-      <div class="signup">
-        <h1>Sign Up</h1>
-      </div>
-      <div class="form">
-        <form>
-          <input
-            type="text"
-            id="Your-Name"
-            name="Your-Name"
-            placeholder="Your name"
-          />
-          <input
-            type="email"
-            id="Your-Email"
-            name="Your-Email"
-            placeholder="Your Email"
-          />
-          <input
-            type="password"
-            id="Password"
-            name="Password"
-            placeholder="Password"
-          />
-          <input
-            type="password"
-            id="Repeat-password"
-            name="Repeat-password"
-            placeholder="Repeat your password"
-          />
-          <input type="checkbox" id="tos" name="tos" />
-          <label for="tos">
-            I agree all statements in <a href="">Terms of service</a></label
-          >
-          <input type="submit" value="Register" />
-        </form>
+      <div class="col-left">
+        <div class="signup">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="form-total">
+          <form>
+            <input
+              class="form1"
+              type="text"
+              id="Your-Name"
+              name="Your-Name"
+              placeholder="Your name"
+            />
+            <input
+              class="form1"
+              type="email"
+              id="Your-Email"
+              name="Your-Email"
+              placeholder="Your Email"
+            />
+            <input
+              class="form1"
+              type="password"
+              id="Password"
+              name="Password"
+              placeholder="Password"
+            />
+            <input
+              class="form1"
+              type="password"
+              id="Repeat-password"
+              name="Repeat-password"
+              placeholder="Repeat your password"
+            />
+            <div class="agree">
+              <input type="checkbox" id="tos" name="tos" />
+              <label for="tos">
+                I agree all statements in <a href="">Terms of service</a></label
+              >
+            </div>
+            <div class="register">
+              <input class="submit" type="submit" value="Register" />
+            </div>
+          </form>
+        </div>
       </div>
       <div class="image">
         <img
           src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
           alt="Home Office Desk"
         />
+        <a href="">I am already a member</a>
       </div>
     </div>
   </body>

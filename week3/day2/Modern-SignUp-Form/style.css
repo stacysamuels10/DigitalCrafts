@@ -1,16 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wgth@100;wght@700&display=swap");
 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
+.col-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
 .signup {
   display: flex;
   font-family: Poppins, sans-serif;
 }
-.form {
+.form1 {
   display: flex;
   font-family: Poppins, sans-serif;
-  font-size: 10px;
+  flex-direction: column;
+  align-items: center;
+  border-width: 0 0 1px;
+  border-bottom: 1px, solid, black;
+  width: 70%;
+  padding: 10px;
+}
+.agree {
+  display: flex;
+  font-family: Poppins, sans-serif;
+  flex-direction: row;
+  margin-top: 1em;
+}
+.register {
+  display: flex;
+  margin-top: 1em;
+  font-family: Poppins, sans-serif;
+  padding: 50px, 80px;
+}
+.submit {
+  display: flex;
+  background-color: #6dabe4;
+  color: white;
+  padding: 50px, 80px;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Poppins, sans-serif;
 }
