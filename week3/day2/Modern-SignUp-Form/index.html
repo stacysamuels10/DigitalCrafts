@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/cc69ffedbf.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;wght@700&display=swap"
       rel="stylesheet"
@@ -21,13 +25,16 @@
         </div>
         <div class="form-total">
           <form>
-            <input
-              class="form1"
-              type="text"
-              id="Your-Name"
-              name="Your-Name"
-              placeholder="Your name"
-            />
+            <div class="input-container">
+              <i class="fa-solid fa-user"></i>
+              <input
+                class="form1"
+                type="text"
+                id="Your-Name"
+                name="Your-Name"
+                placeholder="Your name"
+              />
+            </div>
             <input
               class="form1"
               type="email"
@@ -50,23 +57,29 @@
               placeholder="Repeat your password"
             />
             <div class="agree">
-              <input type="checkbox" id="tos" name="tos" />
+              <div class="check">
+                <input type="checkbox" id="tos" name="tos" />
+              </div>
               <label for="tos">
                 I agree all statements in <a href="">Terms of service</a></label
               >
             </div>
             <div class="register">
-              <input class="submit" type="submit" value="Register" />
+              <input class="submit" type="button" value="Register" />
             </div>
           </form>
         </div>
       </div>
-      <div class="image">
-        <img
-          src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
-          alt="Home Office Desk"
-        />
-        <a href="">I am already a member</a>
+      <div class="col-right">
+        <div class="image">
+          <img
+            src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg"
+            alt="Home Office Desk"
+          />
+        </div>
+        <div class="member">
+          <a href="">I am already a member</a>
+        </div>
       </div>
     </div>
   </body>
