@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  height: 300px;
+}
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  flex-grow: 1;
+}
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  flex-grow: 1;
+}
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  flex-grow: 1;
+}
