@@ -24,3 +24,7 @@
   border: none;
   padding: 7px;
 }
+.copywrite {
+  display: flex;
+  justify-content: center;
+}
