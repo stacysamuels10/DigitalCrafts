@@ -1,14 +1,20 @@
+.heading {
+  display: flex;
+  justify-content: center;
+}
 .flex-container {
   display: flex;
 }
-.col-left {
-  flex-grow: 1.2;
-}
 .col-middle {
-  flex-grow: 20;
+  display: flex;
   background-color: lightcyan;
+}
+.col-left {
+  display: flex;
+  flex-direction: column;
 }
 .nav-bar {
   background-color: transparent;
   border: none;
+  padding: 7px;
 }

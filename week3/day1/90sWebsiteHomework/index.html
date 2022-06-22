@@ -8,47 +8,66 @@
     <syle><link rel="stylesheet" href="style.css" /></syle>
   </head>
   <body>
-    <div class="row">
-      <h1>
-        <img
-          src="http://taco.com/assets/images/autogen/System_and_Network_AdministratNtacolsmbl.gif"
-          alt="techincaladvisors"
-        />
-      </h1>
+    <div class="heading">
+      <img
+        src="http://taco.com/assets/images/autogen/System_and_Network_AdministratNtacolsmbl.gif"
+        class="techAdvisor"
+        alt="techincaladvisors"
+      />
     </div>
     <div class="flex-container">
       <div class="col-left">
-        <button class="nav-bar">
-          <img
-            src="http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
-            alt="Systems and Networks"
-          />
-        </button>
-        <button class="nav-bar">
+        <input
+          type="button"
+          onlick="changeImg()"
+          class="nav-bar"
+          id="systems"
+        />
+        <img
+          src="http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
+          alt="Systems and Networks"
+        />
+        <script>
+          function changeImg() {
+            var image = document.getElementById("systems");
+            if (
+              image.src.match(
+                "http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif"
+              )
+            ) {
+              image.src =
+                "http://taco.com/assets/images/autogen/Systems___and_Networks_Htaco2biga.gif";
+            } else {
+              image.src =
+                "http://taco.com/assets/images/autogen/Systems___and_Networks_Ntaco2big.gif";
+            }
+          }
+        </script>
+        <button class="nav-bar" id="hosting">
           <img
             src="http://taco.com/assets/images/autogen/Web___Hosting_Ntaco2big.gif"
             alt="Systems and Networks"
           />
         </button>
-        <button class="nav-bar">
+        <button class="nav-bar" id="custom">
           <img
             src="http://taco.com/assets/images/autogen/Custom__PCs_Ntaco2big.gif"
             alt="Systems and Networks"
           />
         </button>
-        <button class="nav-bar">
+        <button class="nav-bar" id="equipment">
           <img
             src="http://taco.com/assets/images/autogen/Equipment___Repair_Ntaco2big.gif"
             alt="Systems and Networks"
           />
         </button>
-        <button class="nav-bar">
+        <button class="nav-bar" id="why">
           <img
             src="http://taco.com/assets/images/autogen/Why_Taco_____Ntaco2big.gif"
             alt="Systems and Networks"
           />
         </button>
-        <button class="nav-bar">
+        <button class="nav-bar" id="pumps">
           <img
             src="http://taco.com/assets/images/autogen/Pumps____Ntaco2big.gif"
             alt="Systems and Networks"
