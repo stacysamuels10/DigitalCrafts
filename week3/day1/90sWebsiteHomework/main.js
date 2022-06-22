@@ -1,4 +1,4 @@
-function changeImg() {
+function changeImgSystems() {
   var image = document.getElementById("systems");
   if (
     image.src ==
