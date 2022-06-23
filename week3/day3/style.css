@@ -1,0 +1,8 @@
+h1 {
+  color: red;
+}
+.fruit-basket {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 25% 200px 300px;
+}
