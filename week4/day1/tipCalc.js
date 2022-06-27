@@ -30,15 +30,29 @@ const calcTotal1 = (total) => {
 //if vip = 4 or 5
 //if vip = 3 placed second
 //if lower than 3, placed last
+// 5, 3, 1
+// expected output return array [{vipStatus 5, timeslot: 7:30},  ]
 
+//this does not work, need to reset
+//how you grab the data is what matters/ how you sort it afterwards
 const makeAReservation = (vipStatus, timeslot) => {
-  if (total > 100) {
-    return total * 1.3;
+  const reservationOrder = [];
+  if (vipStatus >= 4) {
+    reservationOrder.push(vipStatus, timeslot);
   }
-  if (total >= 50 && total <= 99) {
-    return total * 1.25;
+  let reservationGuest = {
+    status: vipStatus,
+    time: timeslot,
+  };
+  if (vipStatus == 3) {
+    reservationOrder.push(vipStatus, timeslot);
   }
-  if (total < 50) {
-    return total * 1.2;
+  if (vipStatus < 3) {
+    reservationOrder.push(vipStatus, timeslot);
   }
+  return reservationOrder;
 };
+
+console.log(makeAReservation(5, "7:30"));
+console.log(makeAReservation(3, "7:30"));
+console.log(makeAReservation(1, "7:30"));
