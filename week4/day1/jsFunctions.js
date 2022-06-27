@@ -61,8 +61,21 @@ const palindrome = (word) => {
 const recursiveFunction = () => {
   resursiveFunction();
 };
-
+//argument means passing an argument
+//called function by reference
 const funkyFunction = (argument) => {
   argument("racecar");
 };
 funkyFunction(palindrome);
+
+const printNameAgain = () => {
+  console.log("Ethan");
+  let array = ["1", 2, "one"];
+  for (let index = 0; index < array.length; index++) {
+    console.log("I am looping");
+  }
+  return undefined;
+};
+printNameAgain();
+
+//give your functions a default value
