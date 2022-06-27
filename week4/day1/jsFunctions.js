@@ -42,3 +42,27 @@ const pointlessFunction = () => {
 const writeNameBackwards = (name) => {
   return name.reverse();
 };
+
+const printHouse = () => {
+  console.log();
+  return 0;
+};
+
+const invokefunction = () => {
+  printHouse();
+};
+
+const palindrome = (word) => {
+  if (typeof word === "string") {
+    console.log("it's a string");
+  }
+};
+
+const recursiveFunction = () => {
+  resursiveFunction();
+};
+
+const funkyFunction = (argument) => {
+  argument("racecar");
+};
+funkyFunction(palindrome);
