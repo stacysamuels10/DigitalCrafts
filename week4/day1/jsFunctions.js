@@ -26,3 +26,19 @@ const arrowIncrement = (number) => {
   let total = number + 1;
   return total;
 };
+
+const writeMyName = (name) => {
+  console.log(name);
+};
+
+function multiply(number) {
+  return number * 10;
+}
+
+const pointlessFunction = () => {
+  return null;
+};
+
+const writeNameBackwards = (name) => {
+  return name.reverse();
+};
