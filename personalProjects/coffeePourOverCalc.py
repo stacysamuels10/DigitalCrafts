@@ -22,6 +22,7 @@ def prepCoffeeOrder ():
         "caffiene": strength
     }
     listOfOrders.append(order)
+    
 def calcCoffeeGrind(listOfOrders):
     grindAmount = 0
     pourAmount = 0

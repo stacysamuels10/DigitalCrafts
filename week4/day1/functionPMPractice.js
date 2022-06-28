@@ -26,7 +26,7 @@ function lvl5exercise4() {
   var arr = [1, "adam"];
   return arr.indexOf("adam");
 }
-console.log(lvl5exercise4());
+//console.log(lvl5exercise4());
 
 function lvl6exercise1(num) {
   // Return 'hello' if num is 1, 'world' if num is 2, otherwise return 'bye'
@@ -83,7 +83,7 @@ function lvl6exercise3() {
 // Name the function "finalFunction"
 
 const finalFunction = (num) => {
-  arr = [];
+  let arr = [];
   if (num > 0) {
     for (let index = 0; index < num; index++) {
       arr.push("hi");
@@ -96,12 +96,11 @@ const finalFunction = (num) => {
 
 //console.log(finalFunction(-2));
 
-const mul = (argument) => {
-  array = [];
-  for (let index = 0; index < argument; index++) {
-    array.push();
-  }
-  return array;
+const mul = (a) => {
+  return function (b) {
+    return function (c) {
+      return a * b * c;
+    };
+  };
 };
-
-//console.log(mul(2)(3)(4));
+console.log(mul(2)(3)(4));

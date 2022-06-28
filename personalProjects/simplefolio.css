@@ -1,18 +1,15 @@
 .container {
+  font-family: "Poppins", sans-serif;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(5 1fr);
   grid-template-rows: repeat(5 1fr);
 }
-
-.head-name {
-  grid-column: 1 / span 4;
+.header {
+  grid-column: 1 / span 5;
   grid-row: 1 / 2;
-}
-.head-links {
-  grid-column: 4 / span 2;
-  grid-row: 1 / 2;
-  align-content: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-bar {
@@ -46,6 +43,9 @@ ul.resume {
 .mid-content {
   grid-column: 2 / span 4;
   grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-gap: 10px;
 }
 .lower-content {
   grid-column: 2 / span 4;
@@ -55,4 +55,18 @@ ul.resume {
   grid-column: 1 / span 5;
   grid-row: 5 / 6;
   place-self: center center;
+}
+.project-artwork {
+  height: 120px;
+  width: 150px;
+}
+.project {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  border-radius: 10px;
 }

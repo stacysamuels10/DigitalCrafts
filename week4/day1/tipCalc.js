@@ -56,3 +56,26 @@ const makeAReservation = (vipStatus, timeslot) => {
 console.log(makeAReservation(5, "7:30"));
 console.log(makeAReservation(3, "7:30"));
 console.log(makeAReservation(1, "7:30"));
+
+
+
+const reservationList = [];
+const vipData = [
+  { number: 5, timeslot: "7:30pm" },
+  { number: 3, timeslot: "5:30pm" },
+  { number: 1, timeslot: "3:30pm" },
+  { number: 5, timeslot: "7:30pm" },
+];
+const makeReservation = (status, time) => {
+  // if(status => 4){
+  let reservationGuest = {
+    vipStatus: status,
+    timeslot: time,
+  };
+  reservationList.push(reservationGuest);
+};
+for (let index = 0; index < vipData.length; index++) {
+  makeReservation(vipData[index].number, vipData[index].timeslot);
+}
+reservationList.sort((a, b) => b.vipStatus - a.vipStatus);
+console.log(reservationList);
