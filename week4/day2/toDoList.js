@@ -18,8 +18,8 @@ const printInput = () => {
     toDoListDisplay.append(task, checkDone, exDelete);
     exDelete.onclick = strikeDone;
     checkDone.onclick = strikeDone;
+    count++;
   }
-  count++;
 };
 
 const strikeDone = () => {
