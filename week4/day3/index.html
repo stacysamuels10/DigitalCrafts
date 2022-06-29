@@ -10,12 +10,17 @@
   <body>
     <div>
       <h1>Choose an animal</h1>
-      <select name="" id="animal-farm">
-        <option value="🐱">🐱</option>
+      <select
+        onchange="console.log(event.target.value)"
+        name=""
+        id="animal-farm"
+      >
         <option value="🐷">🐷</option>
-        <option value="🐔">🐔</option>
         <option value="🐶">🐶</option>
+        <option value="🐱">🐱</option>
+        <option value="🐔">🐔</option>
       </select>
+      <div class="animal-noise"></div>
     </div>
   </body>
   <script src="animal.js"></script>
