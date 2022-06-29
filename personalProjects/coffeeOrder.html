@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link defer rel="stylesheet" href="coffeeOrder.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter your Order Preferences</h1>
+      <div class="cupSize">
+        <h4>What size cup?</h4>
+        <input type="radio" name="size" id="small" value="sm" />
+        <label for="small">Small</label>
+        <input type="radio" name="size" id="medium" value="med" />
+        <label for="medium">Medium</label>
+        <input type="radio" name="size" id="large" value="lg" />
+        <label for="large">Large</label>
+      </div>
+      <div class="caffieneStrength">
+        <h4>What caffiene level do you want?</h4>
+        <input type="radio" name="strength" id="light" value="light" />
+        <label for="light">Light</label>
+        <input type="radio" name="strength" id="normal" value="normal" />
+        <label for="normal">Normal</label>
+        <input type="radio" name="strength" id="strong" value="strong" />
+        <label for="strong">Strong</label>
+      </div>
+      <div>
+        <input type="submit" class="submit" value="Submit Order" id="submit" />
+      </div>
+    </div>
+  </body>
+  <script src="coffeeOrder.js"></script>
+</html>

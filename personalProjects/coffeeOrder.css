@@ -1,0 +1,28 @@
+.container {
+  background-color: #352118;
+  font-family: "Josefin Sans", sans-serif;
+  color: #e1d4cc;
+  display: grid;
+  max-width: 470px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 5px 7px 10px #714833;
+}
+
+.submit {
+  background-color: #e1d4cc;
+  font-weight: bold;
+  color: #727f88;
+  margin: 8px;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+.submit:hover {
+  background-color: #ede8e5;
+}
+
+.submit:active {
+  background-color: #d2beb2;
+}

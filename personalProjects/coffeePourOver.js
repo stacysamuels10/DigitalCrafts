@@ -1,21 +1,29 @@
-let listOfOrders = [];
-let moreCoffee = "";
-let pourAmount = 0;
+const container = document.getElementsByClassName("container");
+const numOfCups = document.getElementById("numOfCups");
+const submit = document.getElementById("submit");
 
-function prepCoffeeOrder() {
-  var cupSize = window.prompt("What size coffee do you want? sm, med,lg");
-  var strength = window.prompt(
-    "What kind of strength do you want? normal, strong"
-  );
-  let order = {
-    size: cupSize,
-    caffiene: strength,
-  };
-  listOfOrders.push(order);
-  return listOfOrders;
-}
+const orderSubmit = () => {
+  cupsOrdered = parseInt(numOfCups.value);
+  console.log(cupsOrdered);
+};
+submit.onclick = orderSubmit;
 
-prepCoffeeOrder();
+//let listOfOrders = [];
+// let pourAmount = 0;
+
+// function prepCoffeeOrder() {
+//   //var cupSize = window.prompt("What size coffee do you want? sm, med,lg");
+//   //var strength = window.prompt(
+//   //"What kind of strength do you want? normal, strong";
+//   let order = {
+//     size: cupSize,
+//     caffiene: strength,
+//   };
+//   listOfOrders.push(order);
+//   return listOfOrders;
+// }
+
+// prepCoffeeOrder();
 
 // function calcCoffeeGrind(listOfOrders) {
 //   let grindAmount = 0;
