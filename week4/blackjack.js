@@ -30,6 +30,7 @@ function getCardNumericValue(card) {
   switch (card.value) {
     case "Ace":
       return 1;
+      return 11;
     case "Two":
       return 2;
     case "Three":
