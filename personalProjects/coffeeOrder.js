@@ -10,7 +10,8 @@ const sizeSelection = () => {
     }
   }
 };
-
+//browser.push
+//next page. read num of order, loop
 const caffieneSelection = () => {
   for (i = 0; i < strength.length; i++) {
     if (strength[i].checked == true) {

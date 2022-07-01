@@ -15,6 +15,7 @@
 .image {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  border-radius: 5px;
 }
 ul.likes {
   list-style-type: circle;
