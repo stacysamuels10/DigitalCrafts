@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito Sans", sans-serif;
+  align-self: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  height: 600px;
+  width: 400px;
+}
+
+.input {
+  backdrop-filter: blur(10px);
+  padding: 5px;
+  margin: 5px;
+}
+
+.zip {
+  opacity: 85%;
+}
+
+.submit {
+  background-color: teal;
+  color: white;
+  font-weight: 900;
+}
