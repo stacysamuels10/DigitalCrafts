@@ -5,6 +5,7 @@
 // resolve or reject
 
 //async
+
 function getCoffee(type) {
   //we look for the type of coffee in our database
   console.log("you walk up and grab a cup of joe");
@@ -13,8 +14,13 @@ function getCoffee(type) {
 // const oliviasCofee = async getTypeOfCoffee()
 // getCoffee(oliviasCofee);
 
+//two ways to handle promises
+//.then
+//async await ES6
+
 const getCoffeePromise = new Promise((resolve, reject) => {
-  const coffee = "blonde roast";
+  const coffee = "black";
+  //some kind of action will happen here
   //type of, takes an anonymous function and receives a resolve and reject
   if (coffee === "black") {
     resolve("I have your black coffee");
@@ -23,5 +29,17 @@ const getCoffeePromise = new Promise((resolve, reject) => {
   }
 });
 
-console.log(getCoffeePromise);
+getCoffeePromise
+  .then((message) => console.log(message))
+  .catch((error) => console.log(error));
+
+async function order() {
+  try {
+    const coffeeTime = await getCoffeePromise; //can only use in an async function
+    console.log(coffeeTime);
+  } catch (error) {
+    console.log(error);
+  }
+}
+order();
 //this returns a promise, cant do anything with a promise
