@@ -15,11 +15,20 @@ body {
   height: 600px;
   width: 400px;
 }
+.stuff {
+  -webkit-animation: fadeIn 2s;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
 
-.input {
-  backdrop-filter: blur(10px);
-  padding: 5px;
-  margin: 5px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .zip {
@@ -30,4 +39,14 @@ body {
   background-color: teal;
   color: white;
   font-weight: 900;
+  transition: 0.4s;
+  border: none;
+  box-shadow: 5px 6px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 6px;
+}
+.submit:hover {
+  background-color: rgb(185, 252, 252);
+  color: teal;
+  box-shadow: 5px 6px 11px 0 rgba(0, 0, 0, 0.4);
 }
