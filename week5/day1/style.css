@@ -28,7 +28,7 @@ body {
   grid-gap: 5px;
 }
 .h {
-  background-color: rgba(115, 113, 113, 0.4);
+  background-color: rgba(114, 113, 113, 0.4);
   box-shadow: rgba(119, 115, 115, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
