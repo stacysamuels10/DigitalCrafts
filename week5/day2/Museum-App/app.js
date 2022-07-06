@@ -17,7 +17,7 @@ const findSelected = () => {
 };
 
 const searchMuseum = async (selected) => {
-  const url = `https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&hasImages=true&isOnView=true&q=${selected}`;
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&isOnView=true&q=${selected}`;
   const museumData = await fetch(url);
   const json = await museumData.json();
   const item = json.objectIDs;
@@ -33,10 +33,10 @@ const searchMuseum = async (selected) => {
   image.src = randomArtwork.primaryImage;
   imagespot.append(image);
   const hint1 = document.createElement("p");
-  hint1.innerText = randomArtwork.objectDate;
+  hint1.innerText = `Estimated Date Created: ${randomArtwork.objectDate}`;
   hints.append(hint1);
   const hint2 = document.createElement("p");
-  hint2.innerText = randomArtwork.medium;
+  hint2.innerText = `Medium(material): ${randomArtwork.medium}`;
   hints.append(hint2);
   hintbtn.onclick = () => {
     const hint3 = document.createElement("p");
@@ -49,9 +49,13 @@ const searchMuseum = async (selected) => {
   solution.append(solutionbtn);
   solutionbtn.onclick = () => {
     const artist = document.createElement("p");
-    artist.innerText = `The artist is ${randomArtwork.artistDisplayName} and the artwork is called ${randomArtwork.title}`;
+    artist.innerText = `The artwork is called ${randomArtwork.title}`;
     solution.append(artist);
     solutionbtn.setAttribute("disabled", "disabled");
+    const link = document.createElement("a");
+    link.innerHTML = "Click Here to Learn More";
+    link.href = randomArtwork.objectURL;
+    solution.append(link);
   };
 };
 
