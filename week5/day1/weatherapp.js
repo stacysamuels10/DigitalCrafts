@@ -19,6 +19,7 @@ const currentWeather = document.getElementById("current-weather");
 const humid = document.getElementById("humidity");
 const winds = document.getElementById("windspeed");
 const cloudy = document.getElementById("cloudiness");
+const h = document.querySelectorAll("h");
 
 const searchWeather = async () => {
   const input = document.getElementById("zip-code").value;
@@ -28,6 +29,7 @@ const searchWeather = async () => {
   const background = (document.body.style.backgroundImage =
     "url(./backgrounds/" + json.weather[0].icon + ".jpg)");
   console.log(json);
+
   if (json.main.temp > 70) {
     const Jacket = document.createElement("p");
     Jacket.innerText = "No, you do not need a jacket";
@@ -49,57 +51,99 @@ const searchWeather = async () => {
     Jackets.append(Jacket);
     stuff.append(Jackets);
   }
+
   const icon = document.createElement("img");
   const iconimg = json.weather[0].icon;
   icon.src = `http://openweathermap.org/img/wn/${iconimg}@2x.png`;
   icon.classList = "grid";
   icons.append(icon);
   stuff.append(icons);
-  const city = document.createElement("h5");
+
+  const cityH = document.createElement("h5");
+  cityH.innerText = "City";
+  citys.append(cityH);
+  const city = document.createElement("p");
   city.innerText = json.name;
   city.classList = "grid";
   citys.append(city);
   stuff.append(citys);
+
+  const tempH = document.createElement("h5");
+  tempH.innerText = "Temperature";
+  temp.append(tempH);
   const showTemp = document.createElement("p");
-  showTemp.innerText = `the temperature is ${Math.round(json.main.temp)}`;
+  showTemp.innerText = Math.round(json.main.temp);
   showTemp.classList = "grid";
   temp.append(showTemp);
   stuff.append(temp);
+
+  const dateH = document.createElement("h5");
+  dateH.innerText = "Date";
+  dates.append(dateH);
   const date = document.createElement("h5");
   d = new Date();
   date.innerText = d.toDateString();
   date.classList = "grid";
   dates.append(date);
   stuff.append(dates);
+
+  const feelsLikeH = document.createElement("h5");
+  feelsLikeH.innerText = "Feels Like";
+  feels.append(feelsLikeH);
   const feelsLike = document.createElement("p");
-  feelsLike.innerText = `feels like ${Math.round(json.main.feels_like)}`;
+  feelsLike.innerText = Math.round(json.main.feels_like);
   feelsLike.classList = "grid";
   feels.append(feelsLike);
   stuff.append(feels);
+
+  const weatherH = document.createElement("h5");
+  weatherH.innerText = "Current Weather";
+  currentWeather.append(weatherH);
   const weatherCondition = document.createElement("p");
-  weatherCondition.innerText = `the current weather is ${json.weather[0].description}`;
+  weatherCondition.innerText = json.weather[0].description;
   weatherCondition.classList = "grid";
   currentWeather.append(weatherCondition);
   stuff.append(currentWeather);
+
+  const humidityH = document.createElement("h5");
+  humidityH.innerText = "Humidity";
+  humid.append(humidityH);
   const humidity = document.createElement("p");
-  humidity.innerText = `the current humidity is ${json.main.humidity}%`;
+  humidity.innerText = `${json.main.humidity}%`;
   humidity.classList = "grid";
   humid.append(humidity);
   stuff.append(humid);
+
+  const windH = document.createElement("h5");
+  windH.innerText = "Wind Speed";
+  winds.append(windH);
   const windSpeed = document.createElement("p");
-  windSpeed.innerText = `the current windspeed is ${json.wind.speed} knots`;
+  windSpeed.innerText = `${json.wind.speed} knots`;
   windSpeed.classList = "grid";
   winds.append(windSpeed);
   stuff.append(winds);
+
+  const cloudH = document.createElement("h5");
+  cloudH.innerText = "Cloudiness";
+  cloudy.append(cloudH);
   const cloudiness = document.createElement("p");
-  cloudiness.innerText = `the current cloudiness is ${json.clouds.all}%`;
+  cloudiness.innerText = `${json.clouds.all}%`;
   cloudiness.classList = "grid";
   cloudy.append(cloudiness);
   stuff.append(cloudy);
 };
 
 submit.onclick = () => {
-  stuff.innerHTML = null;
+  Jackets.innerHTML = null;
+  icons.innerHTML = null;
+  citys.innerHTML = null;
+  temp.innerHTML = null;
+  dates.innerHTML = null;
+  feels.innerHTML = null;
+  currentWeather.innerHTML = null;
+  humid.innerHTML = null;
+  winds.innerHTML = null;
+  cloudy.innerHTML = null;
   searchWeather();
 };
 //needs city or zip code
