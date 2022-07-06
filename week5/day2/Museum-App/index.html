@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="app.js"></script>
+    <link defer rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Scavenger Hunt</h1>
+      <div class="chooseRegion">
+        <h3>Choose a region</h3>
+        <input type="radio" id="region-choice" name="region" value="france" />
+        <label for="france">France</label><br />
+        <input
+          type="radio"
+          id="region-choice"
+          name="region"
+          value="united-kingdom"
+        />
+        <label for="united-kingdom">United Kingdom</label><br />
+        <input type="radio" id="region-choice" name="region" value="japan" />
+        <label for="japan">Japan</label><br />
+        <input
+          type="radio"
+          id="region-choice"
+          name="region"
+          value="central-america"
+        />
+        <label for="north-america">North America</label><br />
+        <input type="submit" value="submit" id="submit" />
+      </div>
+      <div class="image" id="image"></div>
+      <div class="hints" id="hints">
+        Hints: type of material, year made(object date)
+      </div>
+      <div class="hint-department" id="hint-department">
+        <p>
+          This is where the department will print after Hint button is pressed
+        </p>
+      </div>
+      <div class="solution" id="solution">
+        this is where the artist will print out and name of art(title)
+      </div>
+    </div>
+  </body>
+</html>
