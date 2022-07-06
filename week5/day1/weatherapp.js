@@ -7,23 +7,20 @@ const input = document.querySelector("#input");
 const submit = document.getElementById("submit");
 const container = document.querySelector(".container");
 const weather = document.querySelector(".weather");
+const bgimage = document.querySelector(".bg-image");
 
 const searchWeather = async () => {
+  const input = document.getElementById("zip-code").value;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${input},us&units=imperial&appid=${API_KEY}`;
+  const weatherData = await fetch(url);
+  const json = await weatherData.json();
+  const background = (document.body.style.backgroundImage =
+    "url(./backgrounds/" + json.weather[0].icon + ".jpg)");
   const stuff = document.createElement("div");
   stuff.classList = "stuff";
   weather.append(stuff);
-  const input = document.getElementById("zip-code").value;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${input},us&units=imperial&appid=${API_KEY}`;
-  console.log(url);
-  const weatherData = await fetch(url);
-  const json = await weatherData.json();
   console.log(json);
-  if (json.main.temp > 70 && json.clouds.all < 60) {
-    const Jacket = document.createElement("p");
-    Jacket.innerText = "No, but you should put on sunscreen";
-    stuff.append(Jacket);
-  }
-  if (json.main.temp > 70 && json.clouds.all > 60) {
+  if (json.main.temp > 70) {
     const Jacket = document.createElement("p");
     Jacket.innerText = "No, you do not need a jacket";
     stuff.append(Jacket);
@@ -71,6 +68,7 @@ const searchWeather = async () => {
 
 submit.onclick = () => {
   weather.innerHTML = null;
+  bgimage.innerHTML = null;
   searchWeather();
 };
 //needs city or zip code
