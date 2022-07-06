@@ -5,13 +5,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 
 .container {
   color: white;
   position: relative;
-  border: 3px solid black;
   display: flex;
   flex-direction: column;
   font-family: "Nunito Sans", sans-serif;
@@ -19,21 +18,36 @@ body {
   align-items: center;
   padding: 5px;
   margin: 5px;
-  height: 600px;
+  height: 650px;
   width: 400px;
+}
+.header {
+  display: grid;
+  justify-items: center;
+  text-shadow: 2px 2px 8px #005eff;
+}
+.search {
+  display: flex;
+  gap: 3px;
 }
 .stuff {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
 }
 .h {
-  background-color: rgba(114, 113, 113, 0.4);
+  background-color: rgba(195, 194, 194, 0.653);
   box-shadow: rgba(119, 115, 115, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 6px;
+  font-size: 100%;
 }
 .grid {
   -webkit-animation: fadeIn 2s;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 @keyframes fadeIn {
@@ -46,10 +60,19 @@ body {
 }
 
 .zip {
-  opacity: 85%;
+  opacity: 70%;
+  border-radius: 5px;
+  border: none;
+}
+
+.zip:hover,
+.zip:focus {
+  border: 1.5px solid #009688;
+  opacity: 100%;
 }
 
 .submit {
+  display: flex;
   background-color: teal;
   color: white;
   font-weight: 900;
@@ -63,4 +86,43 @@ body {
   background-color: rgb(185, 252, 252);
   color: teal;
   box-shadow: 5px 6px 11px 0 rgba(0, 0, 0, 0.4);
+}
+
+h5 {
+  border-bottom: 1px solid black;
+  width: fit-content;
+  padding: 0px;
+  margin: 10px 5px 0px;
+}
+
+#jacket {
+  grid-column: 1 / -1;
+  place-self: center center;
+  margin: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#icon {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  grid-column: 2 / 4;
+  place-self: center;
+}
+
+#cityH {
+  padding: 0px;
+}
+
+#degree {
+  font-size: 38px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+h1 {
+  padding: 0px;
+  margin: 4px;
 }

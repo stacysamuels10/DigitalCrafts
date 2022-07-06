@@ -52,6 +52,15 @@ const searchWeather = async () => {
     stuff.append(Jackets);
   }
 
+  const cityH = document.createElement("h5");
+  cityH.innerText = "City";
+  citys.append(cityH);
+  const city = document.createElement("h3");
+  city.innerText = json.name;
+  city.classList = "grid";
+  citys.append(city);
+  stuff.append(citys);
+
   const icon = document.createElement("img");
   const iconimg = json.weather[0].icon;
   icon.src = `http://openweathermap.org/img/wn/${iconimg}@2x.png`;
@@ -59,78 +68,70 @@ const searchWeather = async () => {
   icons.append(icon);
   stuff.append(icons);
 
-  const cityH = document.createElement("h5");
-  cityH.innerText = "City";
-  citys.append(cityH);
-  const city = document.createElement("p");
-  city.innerText = json.name;
-  city.classList = "grid";
-  citys.append(city);
-  stuff.append(citys);
-
-  const tempH = document.createElement("h5");
-  tempH.innerText = "Temperature";
-  temp.append(tempH);
-  const showTemp = document.createElement("p");
-  showTemp.innerText = Math.round(json.main.temp);
-  showTemp.classList = "grid";
-  temp.append(showTemp);
-  stuff.append(temp);
-
-  const dateH = document.createElement("h5");
-  dateH.innerText = "Date";
-  dates.append(dateH);
-  const date = document.createElement("h5");
-  d = new Date();
-  date.innerText = d.toDateString();
-  date.classList = "grid";
-  dates.append(date);
-  stuff.append(dates);
-
-  const feelsLikeH = document.createElement("h5");
-  feelsLikeH.innerText = "Feels Like";
-  feels.append(feelsLikeH);
-  const feelsLike = document.createElement("p");
-  feelsLike.innerText = Math.round(json.main.feels_like);
-  feelsLike.classList = "grid";
-  feels.append(feelsLike);
-  stuff.append(feels);
-
   const weatherH = document.createElement("h5");
   weatherH.innerText = "Current Weather";
   currentWeather.append(weatherH);
-  const weatherCondition = document.createElement("p");
+  const weatherCondition = document.createElement("h3");
   weatherCondition.innerText = json.weather[0].description;
   weatherCondition.classList = "grid";
   currentWeather.append(weatherCondition);
   stuff.append(currentWeather);
 
-  const humidityH = document.createElement("h5");
-  humidityH.innerText = "Humidity";
-  humid.append(humidityH);
-  const humidity = document.createElement("p");
-  humidity.innerText = `${json.main.humidity}%`;
-  humidity.classList = "grid";
-  humid.append(humidity);
-  stuff.append(humid);
+  const tempH = document.createElement("h5");
+  tempH.innerText = "Temperature";
+  temp.append(tempH);
+  const showTemp = document.createElement("h3");
+  showTemp.innerText = `${Math.round(json.main.temp)}\u00B0`;
+  showTemp.classList = "grid";
+  showTemp.id = "degree";
+  temp.append(showTemp);
+  stuff.append(temp);
+
+  const feelsLikeH = document.createElement("h5");
+  feelsLikeH.innerText = "Feels Like";
+  feels.append(feelsLikeH);
+  const feelsLike = document.createElement("h3");
+  feelsLike.innerText = `${Math.round(json.main.feels_like)}\u00B0`;
+  feelsLike.id = "degree";
+  feelsLike.classList = "grid";
+  feels.append(feelsLike);
+  stuff.append(feels);
 
   const windH = document.createElement("h5");
   windH.innerText = "Wind Speed";
   winds.append(windH);
-  const windSpeed = document.createElement("p");
+  const windSpeed = document.createElement("h3");
   windSpeed.innerText = `${json.wind.speed} knots`;
   windSpeed.classList = "grid";
   winds.append(windSpeed);
   stuff.append(winds);
 
+  const humidityH = document.createElement("h5");
+  humidityH.innerText = "Humidity";
+  humid.append(humidityH);
+  const humidity = document.createElement("h3");
+  humidity.innerText = `${json.main.humidity}%`;
+  humidity.classList = "grid";
+  humidity.id = "degree";
+  humid.append(humidity);
+  stuff.append(humid);
+
   const cloudH = document.createElement("h5");
   cloudH.innerText = "Cloudiness";
   cloudy.append(cloudH);
-  const cloudiness = document.createElement("p");
+  const cloudiness = document.createElement("h3");
   cloudiness.innerText = `${json.clouds.all}%`;
   cloudiness.classList = "grid";
+  cloudiness.id = "degree";
   cloudy.append(cloudiness);
   stuff.append(cloudy);
+
+  const date = document.createElement("h3");
+  d = new Date();
+  date.innerText = d.toDateString();
+  date.classList = "grid";
+  dates.append(date);
+  stuff.append(dates);
 };
 
 submit.onclick = () => {
