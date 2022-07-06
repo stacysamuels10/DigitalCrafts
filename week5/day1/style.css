@@ -38,8 +38,8 @@ body {
 }
 .h {
   background-color: rgba(195, 194, 194, 0.653);
-  box-shadow: rgba(119, 115, 115, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* box-shadow: rgba(119, 115, 115, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px; */
   border-radius: 6px;
   font-size: 100%;
 }
