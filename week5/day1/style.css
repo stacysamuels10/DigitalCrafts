@@ -24,7 +24,7 @@ body {
 .header {
   display: grid;
   justify-items: center;
-  text-shadow: 2px 2px 8px #005eff;
+  text-shadow: 2px 2px 8px #3a3e45;
 }
 .search {
   display: flex;
@@ -38,8 +38,6 @@ body {
 }
 .h {
   background-color: rgba(195, 194, 194, 0.653);
-  /* box-shadow: rgba(119, 115, 115, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px; */
   border-radius: 6px;
   font-size: 100%;
 }
@@ -89,7 +87,7 @@ body {
 }
 
 h5 {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(128, 123, 123);
   width: fit-content;
   padding: 0px;
   margin: 10px 5px 0px;
