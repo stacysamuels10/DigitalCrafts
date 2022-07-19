@@ -9,7 +9,8 @@ app.set("view engine", "html");
 
 app.get("/", (req, res) => {
   // res.send("Hello from Express!");
-  res.render("home");
+  const user = { name: "stacy" };
+  res.render("home", { locals: { user } });
 });
 
 app.get("/about", (req, res) => {
@@ -17,6 +18,7 @@ app.get("/about", (req, res) => {
 });
 
 app.post("/home", (req, res) => {
+  //will not show up in html
   res.send("Hello from Express!");
 });
 
