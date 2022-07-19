@@ -14,7 +14,9 @@ const sendData = async () => {
     },
     body: JSON.stringify(data),
   });
+  console.log(dataWeAreSending);
   const json = await dataWeAreSending.json();
+  console.log(json);
 };
 
 button.onclick = () => sendData();
