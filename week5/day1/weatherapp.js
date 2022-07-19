@@ -1,6 +1,6 @@
 //enter zip
 //get temp
-const API_KEY = "44c139c6aab3ee37e9df0bde2b0ab1b6";
+const API_KEY = "";
 
 //https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid={API key}
 const input = document.querySelector("#input");
