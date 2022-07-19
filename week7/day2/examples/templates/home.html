@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link defer rel="stylesheet" href="style.css" />
+    <script defer src="hello.js"></script>
   </head>
   <body>
     <div class="container">
@@ -16,6 +17,9 @@
       ${students.map(student => `
       <h2>${student}</h2>
       `).join('')}
+
+      <input type="text" name="" id="input" />
+      <button id="button">submit</button>
     </div>
   </body>
 </html>

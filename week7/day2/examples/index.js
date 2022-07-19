@@ -26,8 +26,8 @@ app.get("/about", (req, res) => {
 });
 
 app.post("/home", (req, res) => {
-  //will not show up in html
-  res.send("Hello from Express!");
+  console.log(req.body.message);
+  res.json(req.body.message);
 });
 
 app.listen(PORT, console.log(`lsitening on port ${PORT}`));
