@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@supabase/supabase-js": "^1.35.4",
     "dotenv": "^16.0.1",
