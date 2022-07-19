@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link defer rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Howdy</h1>
-      ${user.name}
-      <p>This is my page</p>
+      <p>${user.name}</p>
+      <p>Our teachers name is ${teacher}</p>
+      <p>We have two studdents in our class and their name's are:</p>
+      ${students.map(student => `
+      <h2>${student}</h2>
+      `).join('')}
     </div>
   </body>
 </html>
