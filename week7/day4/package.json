@@ -29,6 +29,7 @@
     "es6-weak-map": "^2.0.3",
     "escalade": "^3.1.1",
     "event-emitter": "^0.3.5",
+    "express": "^4.18.1",
     "ext": "^1.6.0",
     "fs-extra": "^9.1.0",
     "fs.realpath": "^1.0.0",
