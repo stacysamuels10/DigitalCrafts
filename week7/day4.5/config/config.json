@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "stacysamuels",
+    "password": null,
+    "database": "restaurant_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "stacysamuels",
+    "password": null,
+    "database": "restaurant_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "stacysamuels",
+    "password": null,
+    "database": "restaurant_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
