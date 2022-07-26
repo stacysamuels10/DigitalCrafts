@@ -1,25 +1,24 @@
 const express = require("express");
+const { Clients } = require("./models");
 const app = express();
+const es6Renderer = require("express-es6-template-engine");
 const bcrypt = require("bcrypt");
 const PORT = 3030;
+const router = express.Router();
 
 app.use(express.json());
-//request object
-//req.body as long as you have app.use(express.json());
-//{
-// "username" : "stacy.samuels",
-// "password" : "hello123"
-// }
-//req.body.password -> "hello123"
+const userRoutes = require("./server/user");
+const restaurantsRoutes = require("./server/restuarants");
 
-app.post("/create_user", async (req, res) => {
-  const { password } = req.body;
-  try {
-    const salt = await bcrypt.genSalt(20);
-    console.log(salt);
-  } catch (error) {}
-  console.log(req.body);
-  res.send("create user");
+app.use("/user", userRoutes);
+app.use("/restaurants", restaurantsRoutes);
+app.use(express.static("public"));
+app.engine("html", es6Renderer);
+app.set("views", "./public/views");
+app.set("view engine", "html");
+
+app.get("/", function (req, res) {
+  res.render("index");
 });
 
 app.listen(PORT, console.log(`listening on port ${PORT}`));
