@@ -11,9 +11,11 @@
   <body>
     <div class="container">
       <h1>Pets!</h1>
-    </div>
-    <div class="petsList">
-      <ul id="pets_list"></ul>
+      <dl>
+        ${title.map( Pet => `
+        <h2>${Pet.name}</h2>
+        `).join('')}
+      </dl>
     </div>
   </body>
 </html>

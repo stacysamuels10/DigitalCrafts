@@ -1,4 +1,4 @@
-//const { Pets } = require("../../models");
+const { Pets } = require("../../../sequelize/models");
 const express = require("express");
 const router = express.Router();
 
@@ -7,10 +7,13 @@ router.post("/create_pets", (req, res) => {
   res.send("create_pets");
 });
 //read
-router.get("/get_pets", (req, res) => {
+router.get("/get_pets", async (req, res) => {
   //get the index.html page and view an html
   //that says pets
-  res.render("index");
+  const PetsIWant = await Pets.findAll({});
+  res.render("index", {
+    locals: { title: PetsIWant },
+  });
   //res.send("get pets");
 });
 //update
