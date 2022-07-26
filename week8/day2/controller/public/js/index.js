@@ -8,5 +8,6 @@ const sendData = async () => {
   });
   const json = await dataWeWant.json();
 };
-
+//DOM manipulation object
+//append to a list
 sendData();
