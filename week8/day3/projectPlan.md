@@ -1,7 +1,5 @@
 # Github projects
 
-csilvad99
-
 similar to trello but better because it is linked to the direct code.
 
 1. start using project table or make a board (board is a bit easier to look at)
