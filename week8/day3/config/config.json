@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "beluhxvg",
+    "password": "MQvW-ynMvib5eBaG0f4FoCh-0tNbYM6L",
+    "database": "beluhxvg",
+    "host": "hansken.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "beluhxvg",
+    "password": "MQvW-ynMvib5eBaG0f4FoCh-0tNbYM6L",
+    "database": "beluhxvg",
+    "host": "hansken.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "beluhxvg",
+    "password": "MQvW-ynMvib5eBaG0f4FoCh-0tNbYM6L",
+    "database": "beluhxvg",
+    "host": "hansken.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
