@@ -1,27 +1,33 @@
 const express = require("express");
-const { Users } = require("./models");
+const { Users, Sessions } = require("./models");
 const app = express();
+const models = require("./models");
 const es6Renderer = require("express-es6-template-engine");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const store = new SequelizeStore({
+  db: models.sequelize,
+});
 const PORT = 3030;
 
 //middleware
+app.use(express.json());
+app.engine("html", es6Renderer);
+app.set("views", "views");
+app.set("view engine", "html");
+app.use(express.json());
 app.use(cookieParser());
 app.use(
   session({
     secret: "secret",
     resave: false,
     saveUninitialized: true,
-    cookie: {
-      maxAge: 2592000000,
-      secure: false,
-    },
+    store: store,
   })
 );
-
-app.use(express.json());
+store.sync();
 
 app.post("/login", async (req, res) => {
   const user = await Users.findOne({
@@ -32,6 +38,7 @@ app.post("/login", async (req, res) => {
   });
   if (user) {
     req.session.user = user;
+    console.log(req.session.user);
     res.json({
       message: "Login Success",
       user: user,
@@ -44,8 +51,13 @@ app.post("/login", async (req, res) => {
 });
 
 //function used on where your routes are
-const checkLogin = (req, res, next) => {
-  if (req.session.user) {
+const checkLogin = async (req, res, next) => {
+  const sessionValid = await Sessions.findOne({
+    where: {
+      sid: req.session.sid,
+    },
+  });
+  if (sessionValid) {
     next();
   } else {
     res.json({
@@ -53,6 +65,11 @@ const checkLogin = (req, res, next) => {
     });
   }
 };
+
+app.get("/home", checkLogin, (req, res) => {
+  console.log(req.session);
+  res.render("index", { locals: { name: req.session.user } });
+});
 
 app.post("/delete_all_secrets", checkLogin, async (req, res) => {
   res.send("You must be legit, we deleted everything");
