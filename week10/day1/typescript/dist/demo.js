@@ -11,6 +11,7 @@ let rahminsAge = 23;
 //boolean
 // true or false
 let stacysInterenetConnection = false;
+// any
 let joe = "joe";
 joe = 0;
 joe = () => { };
