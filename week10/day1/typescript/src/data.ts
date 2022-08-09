@@ -63,26 +63,7 @@ const listOfNames = [
 ];
 
 const AssignId = (userIds: [], usersToAssign: []): [] => {
-  const assignedIds: [] = [];
-  type assignedUser = {
-    name: string;
-    id: string;
-  };
-  for (let i = 0; i < userIds.length; i++) {
-    let assignedUserLoop: assignedUser = {
-      name: usersToAssign[i],
-      id: userIds[i],
-    };
-    assignedIds.push(assignedUserLoop);
-  }
-  return assignedIds;
-};
-
-const AssignNameToUser = (assignedIds: [], listOfNames: string[]) => {
-  for (let i = 0; i < assignedIds.length; i++) {
-    assignedIds[i];
-  }
-};
+  
 
 // const AssignId = (userIds: string[], listOfNames: string[]):object[] => {
 
