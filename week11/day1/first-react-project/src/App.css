@@ -1,0 +1,42 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+.Header {
+  display: grid;
+  grid-column: 1 / -1;
+  justify-content: center;
+  background-color: aquamarine;
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+.Footer {
+  display: grid;
+  justify-content: center;
+  background-color: aquamarine;
+  border-bottom: 2px solid black;
+  width: 100%;
+  grid-column: 1 / -1;
+  border-top: 2px solid black;
+}
+.Content {
+  display: grid;
+  justify-items: center;
+  padding: 8px;
+  background-color: wheat;
+}
+.AdBar {
+  display: grid;
+  justify-content: center;
+  background-color: cadetblue;
+  border-left: 2px solid black;
+}
+
+.MenuBar {
+  display: grid;
+  padding: 0;
+  justify-content: center;
+  background-color: cadetblue;
+  border-right: 2px solid black;
+}
