@@ -14,17 +14,16 @@ const FormComp = (props) => {
           alert("not valid email");
         }
         break;
-      // case props.name:
-      //   // write name validation name is greater than 5 characters
-      //   if (props.name.length > 5) {
-      //     console.log("success");
-      //   } else {
-      //     console.log("error");
-      //   }
-      //   break;
-
-      // default:
-      //   break;
+      case props.name:
+        // write name validation name is greater than 5 characters
+        if (props.name.length > 2) {
+          props.setFormData({ ...props.formData, name: props.formData.name });
+        } else {
+          alert("Please enter a name with at least 3 characters");
+        }
+        break;
+      default:
+        break;
     }
   };
   return (
@@ -63,7 +62,7 @@ const FormComp = (props) => {
               [e.target.name]: e.target.value,
             })
           }
-          type="text"
+          type="password"
           placeholder="password"
         />
         <input
