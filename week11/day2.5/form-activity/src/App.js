@@ -5,22 +5,25 @@ import { useState } from "react";
 
 function App() {
   const defaultForm = {
-    name: "",
+    firstName: "",
+    lastName: "",
     password: "",
-    address: "",
     email: "",
   };
   const [formData, setFormData] = useState(defaultForm);
+  const [submitData, setSubmitData] = useState(defaultForm);
   return (
     <div className="App">
       <FormComp
         formData={formData}
         setFormData={setFormData}
         defaultForm={defaultForm}
+        submitData={submitData}
+        setSubmitData={setSubmitData}
       />
       <Output
-        formData={formData}
-        setFormData={setFormData}
+        submitData={submitData}
+        setSubmitData={setSubmitData}
         defaultForm={defaultForm}
       />
     </div>
