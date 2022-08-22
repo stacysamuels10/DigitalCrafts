@@ -1,6 +1,15 @@
 const initialState = {
   user: "Stacy",
-  weather: { weather: [] },
+  weather: {
+    weather: [
+      {
+        description: "Weather Conditions",
+        icon: "01d",
+      },
+    ],
+    main: { temp: "", feels_like: "", humidity: "" },
+    name: "City",
+  },
   location: "",
   changeMe: "",
 };
