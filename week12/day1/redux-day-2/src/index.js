@@ -4,8 +4,10 @@ import "./index.css";
 import App from "./App";
 import { applyMiddleware, createStore } from "redux";
 import { Provider } from "react-redux";
+import logger from "redux-logger";
+import rootReducer from "./reducers/rootReducer";
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
