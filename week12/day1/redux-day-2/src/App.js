@@ -41,20 +41,20 @@ function App() {
             {weather?.weather[0]?.description.charAt(0).toUpperCase() +
               weather?.weather[0]?.description.slice(1).toLowerCase()}
           </p>
-          <p className="city">{`📍 ${weather?.name}`}</p>
+          <p className="city">{`${weather?.name}`}</p>
         </div>
         <div className="extrainfo">
           <div className="feels">
             <p className="large-label">{`${Math.round(
               weather?.main?.feels_like
             )}\u00B0 F`}</p>
-            <p className="small-label">🌡️ Feels like</p>
+            <p className="small-label">Feels like</p>
           </div>
           <div className="humid">
             <p className="large-label">{`${Math.round(
               weather?.main?.humidity
             )}%`}</p>
-            <p className="small-label">💧 Humidity</p>
+            <p className="small-label">Humidity</p>
           </div>
         </div>
       </div>
