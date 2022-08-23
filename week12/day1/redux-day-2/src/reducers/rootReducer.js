@@ -1,15 +1,17 @@
 const initialState = {
   user: "Stacy",
-  weather: {
-    weather: [
-      {
-        description: "Weather Conditions",
-        icon: "01d",
-      },
-    ],
-    main: { temp: "", feels_like: "", humidity: "" },
-    name: "City",
-  },
+  weather: [
+    {
+      weather: [
+        {
+          description: "Weather Conditions",
+          icon: "01d",
+        },
+      ],
+      main: { temp: "", feels_like: "", humidity: "" },
+      name: "City",
+    },
+  ],
   location: "",
   changeMe: "",
 };
@@ -24,7 +26,14 @@ const rootReducer = (state = initialState, action) => {
     case "SET_CHANGEME":
       return { ...state, changeMe: action.payload };
     case "SET_WEATHER":
-      return { ...state, weather: action.payload };
+      if (state.weather.length >= 5) {
+        const currentWeather = state.weather;
+        const filteredWeather = currentWeather.filter(
+          (e, index) => index < currentWeather.length - 1
+        );
+        return { ...state, weather: [action.payload, ...filteredWeather] };
+      }
+      return { ...state, weather: [action.payload, ...state.weather] };
     default:
       return state;
   }
