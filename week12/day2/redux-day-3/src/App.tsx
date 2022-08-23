@@ -1,11 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
+import Homepage from "./components/Homepage";
 
 function App() {
-  const dispatch = useDispatch();
   return (
     <div className="App">
-      <h1>Howdy</h1>
+      <Homepage />
     </div>
   );
 }
